@@ -1,0 +1,90 @@
+---
+title: "Program_Gen_File"
+format: docx
+toc: true
+params:
+  program_name: NA
+  Year: NA
+  Sem: NA
+  # If adding more or different parameters (e.g., Year, Semester) will need to add to or change the params list.
+---
+
+```{r setup, include=FALSE}
+#| warning: FALSE
+#| message: FALSE
+
+knitr::opts_chunk$set(error=FALSE)
+
+options(digits = 3) # Setting the number of digits for the entire document
+
+required_packages <- c("tidyverse", "ggplot2", "htmlTable", "openxlsx", "flextable", "psych", "stringr")
+
+# Call packages
+for (pkg in required_packages) {
+    library(pkg, character.only = TRUE)
+}
+
+# Setting parameters for flextable
+
+set_flextable_defaults(
+  font.size = 12, theme_fun = theme_vanilla,
+  padding = 6,
+  background.color = "#FFFFFF")
+```
+
+```{r Specifying Params, include=FALSE}
+program <- params$program_name
+Years <- params$Year
+Sem <- params$Sem
+
+#program <- "IA"
+#Years <- "First"
+#Sem <- "Fall"
+```
+
+```{r DateBlock, include=FALSE, message=FALSE}
+
+Analysis <- print(paste("This analysis was conducted on", program, "data"))
+
+current_date <- format(Sys.Date(), "%B %d, %Y")
+
+Date <- print(paste0("This Report was Generated on ", current_date))
+```
+
+```{r Average Score Table}
+#| echo: FALSE
+
+# Reading in data
+data <- read.xlsx("./Data/Data_Large.xlsx")
+
+# Filtering by program
+filtered_df <- data %>% 
+  filter(Program == program, Year == Years, Semester == Sem)
+
+# Creating Total score
+
+filtered_df$Tot <- rowSums(filtered_df[5:16])
+
+aggregated_df <- filtered_df %>%
+  group_by(Year) %>%
+  summarise(Average_Score = mean(Tot, na.rm = TRUE))
+
+flextable(aggregated_df)
+```
+
+```{r Average Score Graph}
+#| echo: FALSE
+#| warning: FALSE
+ggplot(filtered_df, aes(x = Tot, fill = Year)) +
+  geom_histogram(aes(y = ..density..), alpha = 0.5, bins = 30, position = "identity") +
+  geom_density(aes(color = Year, fill = Year), alpha = 0.5, linewidth = 1) +
+  scale_fill_manual(values = c("First" = "#450084", "Second" = "#CBB677")) +
+  scale_color_manual(values = c("First" = "#450084", "Second" = "#CBB677")) +
+  theme_minimal() +
+  labs(title = "Distribution of Total Scores", x = "Total Scores", y = "Density")
+```
+
+```{r Cleaning up Global Environment, include=FALSE}
+rm(list = ls()[sapply(mget(ls()), is.data.frame)])
+rm(ft, p, new_columns)
+```

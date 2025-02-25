@@ -1,0 +1,123 @@
+---
+title: "Basic Parent File"
+format: pdf
+---
+
+# Parent File
+
+This file contains all of the libraries, folder/file paths, and further specifications of assessments.
+
+## Libraries
+
+At the beginning, load all the libraries you will need to use for data analysis, visualization, etc.
+
+```{r Libraries}
+#| warning: FALSE
+#| message: FALSE
+
+required_packages <- c("tidyverse", "ggplot2", "htmlTable", "openxlsx", "flextable", "psych", "stringr", "openxlsx")
+
+# Check and install packages if needed
+for (pkg in required_packages) {
+  if (!requireNamespace(pkg, quietly = TRUE)) {
+    install.packages(pkg)
+    library(pkg, character.only = TRUE)
+  } else {
+    library(pkg, character.only = TRUE)
+  }
+}
+```
+
+## Folders and File Path
+
+Create and/or Specify the folder in which you will be working in and where you would like your reports to output to
+
+### Folders
+
+```{r Folders}
+# Create a folder structure for storing reports
+# The first line creates a "parent folder" named "Reports" in the current working directory.
+# The second line creates a "subfolder" named "Tables" within the "Reports" folder.
+
+#Reminder: getwd() tells you what the current working directory is
+#This isn't necessary if working within a project
+
+dir.create("./Reports") # Creates the "Reports" folder in the current working directory
+dir.create("./Reports/Excel Workbooks") # Creates the "Tables" subfolder within the "Reports" folder
+
+# The "Tables" subfolder is useful if saving out Excel sheets for each assessment. This is helpful when dealing with a large number of assessments as well as a large number of automated reports.
+
+dir.create("./Data") # Creates a folder to house data files to maintain a consistent folder structure for year-to-year or semester-to-semester reporting
+
+dir.create("./Children") # Creates a folder to house the child/children files we will create
+```
+
+### File Paths
+
+Specifying File Paths
+
+```{r File Paths}
+
+# Define file paths for a project folder structure
+
+# The base path is set to the current working directory using "./".
+# All subsequent file paths are constructed relative to this base path.
+
+path <- "./"  # Base path representing the current working directory
+
+# File paths for specific subdirectories:
+Children_file_path <- paste0(path, "Children/") # Path for the "Children" folder
+data_file_path <- paste0(path, "Data/")         # Path for the "Data" folder
+report_file_path <- paste0(path, "Reports/")    # Path for the "Reports" folder
+
+
+# Specify the data file name below
+# Housing in the parent file enables for higher flexibility of the Child file
+data_file_name <- "Data_Large"
+
+```
+
+### Further Specifications
+
+Obtaining Factors (Variables) and levels in Data
+
+```{r Factors}
+probe <- read.xlsx(paste0(data_file_path, "Data.xlsx"))
+
+# This is a simple simulated data set that is likely not reflective of real data; however, you can may already know how you want to segment your data for reporting.
+
+# Select only the columns with character data - Since our classifying characteristics (e.g., Year, Semester, Program) are the only character values this is a quick and easy way to isolate out values.
+probe <- probe[, sapply(probe, is.character)]
+
+unique_values <- lapply(probe, unique)
+
+```
+
+# Running Child File
+
+Note: .docx is faster than .pdf
+```{r Child}
+
+#Program Specific
+programs <- unique_values$Program # Pulling from out unique_values list
+
+for (i in 1:length(programs)) {
+  program_name <- programs[i]
+  output_file_name <- paste0(program_name, "_Report.docx")
+  output_path <- file.path(report_file_path, output_file_name)
+  # Use the Value names specified in the latest for loop
+  # This will vary the name of the file output for each group analyzed
+  quarto::quarto_render(
+    # The name of the Child file you are using
+    input = "Child_101.qmd",
+    # The naming convention of the output file defined above
+    output_file = output_file_name,
+    # params are the list of parameters ported over from the Parent file into the Child file.
+    # You must update the YAML header under "params" to reflect the variables you are porting over.
+    execute_params = list(program_name = program_name)
+  )
+  
+  #Moves the file to the correct folder (i.e. Reports)
+  file.rename(output_file_name, output_path)
+}
+```
