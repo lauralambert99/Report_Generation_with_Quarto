@@ -43,6 +43,13 @@ current_date <- format(Sys.Date(), "%B %d, %Y")
 
 This report was generated on `{r} current_date` for `{r} program`.  
 
+# *Description of Measure*
+The Force Concept Inventory (FCI) is a standardized physics assessment used by universities to evaluate and compare students' conceptual understanding of Newtonian mechanics. Administered as a 12-question multiple-choice quiz, the FCI is commonly given to STEM majors at different points in their academic journey—such as at the beginning and end of introductory physics courses—to track student progression and measure learning gains. Institutions use FCI results to assess instructional effectiveness, identify persistent misconceptions, and compare cohorts over time, helping to inform curriculum improvements and teaching strategies in physics education.
+
+# *Results*
+
+## *Average Score*
+
 ```{r Total}
 #| echo: FALSE
 

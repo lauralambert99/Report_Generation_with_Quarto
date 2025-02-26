@@ -26,7 +26,7 @@ data(iris)
 
 ```
 
-## Welcome! {auto-animate="true"}
+## Welcome!
 
 :::{.incremental}
 Road map for this session:
@@ -45,14 +45,14 @@ Each section will have some content followed by some hands-on time
   
 ## General Housekeeping 
 
-  - Please feel free to put questions in the chat as they come up
+  - Please feel free to put questions in the chat as they come up or use 'raise hand'
 
   - It is assumed you have R and RStudio installed on your machines - if not, there's time to do it now!
 
   - We will install Quarto shortly
 
 :::{.notes}
-I'll drop the link to get R/RStudio in the chat [GET THIS!]
+I'll drop the link to get R/RStudio in the chat
 :::
 
 ## Objectives
@@ -69,7 +69,7 @@ I'll drop the link to get R/RStudio in the chat [GET THIS!]
 :::{.incremental}
 Let's ask a different question:
 
-How do you currently analyze your data?  (answers may be along the lines of Excel workbooks, SPSS dropdowns, SPSS syntax, R, Python, SAS, etc.)
+How do you currently analyze your data?  (answers might be along the lines of Excel workbooks, SPSS dropdowns, SPSS syntax, R, Python, SAS, etc.)
 :::
 
 :::{.notes}
@@ -323,6 +323,12 @@ Unlike in a script file, you set off code chunks with three back-ticks
   - Different levels of header are identified with # (##, ###, etc.)
   - You can make text **bold** by sandwiching between \*\* and *italic* with \*
 
+## Parts of a Quarto Document: Text + Code
+
+  - Quarto allows for inline code evaluation
+    + Integrates objects or values calculated in a previous code chunk with text
+  - Helps avoid needing to go back and find every instance of a value if it has changed!
+
 
 ## Parts of a Quarto Document: Math and Symbols
 
@@ -336,7 +342,7 @@ Drop link to cheat-sheet
 
 ## Parts of a Quarto Document: Math and Symbols
 
- \$\\sigma^\{2\}\$ renders into $\sigma^{2}$
+ \$\\sigma^\{2\}\$ = $\sigma^{2}$
 
 and 
 
@@ -592,6 +598,7 @@ Projects are a good idea
 ## Parent File
 
   - Specify File Paths
+    + Quarto doesn't love this when rendering
 
 ```{{r File Paths}}
 
@@ -638,35 +645,9 @@ unique_values <- lapply(probe, unique)
   - Specify which variables to use in your dataset (e.g. "Program", "School", "Year", etc.)
   - ***DETOUR***: make child file!!
 
-## Parent File
-
-  - Run child file (In a RMarkdown framework)
-
-```{{r Child}}
-
-#Program Specific
-programs <- unique_values$Program # Pulling from out unique_values list
-
-for (i in 1:length(programs)) {
-  program_name <- programs[i]
-  # Use the Value names specified in the latest for loop
-  # This will vary the name of the file output for each group analyzed
-  output <- paste0(report_file_path, "/", program_name, "_Report.docx")
-  rmarkdown::render(
-    # The name of the Child file you are using - YOU NEED TO MAKE THIS!
-    input = "./Program_Gen_File.qmd",
-    # The naming convention of the output file
-    output_file = output,
-    # params are the list of parameters ported over from the Parent file into the Child file.
-    # You must update the YAML header under "params" to reflect the variables you are porting over.
-    params = list(program_name = program_name)
-  )
-}
-```
-
 ## Parent File 
 
-  - Run child file (in a Quarto framework)
+  - Run child file
 
 ```{{r Child}}
 
@@ -738,7 +719,7 @@ library(tidyverse)
 
 program <- params$program_name
 ```
-  
+
 ## Basic Child File
 
   - Do the analysis!
@@ -795,7 +776,7 @@ rm(ft, p, new_columns)
 
   - Modify the Parent file:
     + Use the `iris` dataset (built in to R)
-    + Create a list of "programs" to iterate over
+    + Indicate the variable to iterate over (HINT: only one is a factor!)
     + (Bonus!) Specify file paths for output, data, etc.
   - Modify the Child file:
     + Generate reports dynamically for each "program"
@@ -804,10 +785,10 @@ rm(ft, p, new_columns)
 
   - We started with just one param (program)
   - We also didn't generate any tables/graphs
-  - Once you have your base Parent/Child files, you can easily add on
+  - Once you have your base Parent/Child files, you can easily add to them
   - Advanced data analysis all goes in the Child file
   
-## Using Tidyverse
+## Using Tidyverse/dplyr
 
 ```{{r Average Score Table}}
 #| echo: FALSE
@@ -915,6 +896,17 @@ params:
 ---
 ````
 
+## Looping over multiple parameters
+
+```{{r Specifying Params}}
+#| echo: FALSE
+
+program <- params$program_name
+Years <- params$Year
+Sem <- params$Sem
+
+```
+
 ## Activity
 
 **Using the guide parent/child files from your last activity:**
@@ -925,9 +917,22 @@ params:
   - Add an analysis section to your Child file:
     + Summarize filtered data by one variable
     + Create a table and/or a plot
-    + Use quarto::quarto_render() to produce all reports
+  - Use quarto::quarto_render() to produce all reports
 
-## Wrapping Up
+## Wrapping Up{.incremental}
+
+  - Sometimes, things don't quite go right
+    + Error messages are shockingly useful
+  - Getting your formatting correct can also be a challenge
+    + Large tables are a pain
+
+## Wrapping Up{.incremental}
+
+  - Integrating code, text, and files into a report aids in flexibility and reproducibility
+  - Quarto is one tool to accomplish this
+    + Less copy/pasting numbers, graphs, and tables
+
+## Wrapping Up{.incremental}
 
   - Quarto can be used to automate report generation 
     + Documentation
