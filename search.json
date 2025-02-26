@@ -1,0 +1,457 @@
+[
+  {
+    "objectID": "Presentation.html#welcome",
+    "href": "Presentation.html#welcome",
+    "title": "Report Generation with Quarto",
+    "section": "Welcome!",
+    "text": "Welcome!\n\nRoad map for this session:\n\nIntroduction and Overview\nQuarto Basics\nParent/Child File Structure\nAdvanced Data Analysis\nWrap-up\nTime for Questions\n\n\n\nEach section will have some content followed by some hands-on time"
+  },
+  {
+    "objectID": "Presentation.html#general-housekeeping",
+    "href": "Presentation.html#general-housekeeping",
+    "title": "Report Generation with Quarto",
+    "section": "General Housekeeping",
+    "text": "General Housekeeping\n\nPlease feel free to put questions in the chat as they come up or use ‘raise hand’\nIt is assumed you have R and RStudio installed on your machines - if not, there’s time to do it now!\nWe will install Quarto shortly\n\n\nI’ll drop the link to get R/RStudio in the chat"
+  },
+  {
+    "objectID": "Presentation.html#objectives",
+    "href": "Presentation.html#objectives",
+    "title": "Report Generation with Quarto",
+    "section": "Objectives",
+    "text": "Objectives\n\nParticipants will identify benefits of data analysis within an integrated environment\nParticipants will make a Quarto Project\nParticipants will analyze and write code in Quarto\nParticipants will utilize a Parent/Child file structure to generate multiple unique reports for different programs/subgroups\nParticipants will learn best practices for reproducibility"
+  },
+  {
+    "objectID": "Presentation.html#why-automated-reporting",
+    "href": "Presentation.html#why-automated-reporting",
+    "title": "Report Generation with Quarto",
+    "section": "Why Automated Reporting?",
+    "text": "Why Automated Reporting?\n\nLet’s ask a different question:\nHow do you currently analyze your data? (answers might be along the lines of Excel workbooks, SPSS dropdowns, SPSS syntax, R, Python, SAS, etc.)\n\n\nPut your answer in chat"
+  },
+  {
+    "objectID": "Presentation.html#why-automated-reporting-1",
+    "href": "Presentation.html#why-automated-reporting-1",
+    "title": "Report Generation with Quarto",
+    "section": "Why Automated Reporting?",
+    "text": "Why Automated Reporting?\n\n\nWhy use syntax over dropdown menus?\nDocumentation and reproducibility!"
+  },
+  {
+    "objectID": "Presentation.html#why-automated-reporting-2",
+    "href": "Presentation.html#why-automated-reporting-2",
+    "title": "Report Generation with Quarto",
+    "section": "Why Automated Reporting?",
+    "text": "Why Automated Reporting?\n\n\nSimilarly, we can document the steps we took to analyze the data and generate reports\nAlong with documentation, the reproducibility aspect can save time in a multitude of ways\nUsing a Parent/Child format allows for automatic, disaggregated generation of multiple reports (no more manually creating each and every report!)\n\n\n\nSaves time both in being able to spit out a bunch of reports all at once, but also next year when you do it, you don’t have to start from scratch."
+  },
+  {
+    "objectID": "Presentation.html#what-is-a-parentchild-format",
+    "href": "Presentation.html#what-is-a-parentchild-format",
+    "title": "Report Generation with Quarto",
+    "section": "What is a Parent/Child format?",
+    "text": "What is a Parent/Child format?\n\n\nWe will dive deeper into Parent/Child structure in a bit\nBriefly, you can take one large dataset and make individualized reports based on program, college, department, etc.\nThink test score reports children may get, or SAT/GRE/ACT/PRAXIS score reports"
+  },
+  {
+    "objectID": "Presentation.html#what-is-a-parentchild-format-1",
+    "href": "Presentation.html#what-is-a-parentchild-format-1",
+    "title": "Report Generation with Quarto",
+    "section": "What is a Parent/Child format",
+    "text": "What is a Parent/Child format\n\n\n\n\n\n\n\nG\n\n\n\na1\n\nAll Score Data For\nUniversity XYZ\n\n\n\na2\n\nReport for\nEnglish\n\n\n\na1-&gt;a2\n\n\n\n\n\na3\n\nReport for\nHistory\n\n\n\na1-&gt;a3\n\n\n\n\n\na4\n\nReport for\nBiology\n\n\n\na1-&gt;a4\n\n\n\n\n\na5\n\nReport for\nSpanish\n\n\n\na1-&gt;a5"
+  },
+  {
+    "objectID": "Presentation.html#what-is-a-parentchild-format-2",
+    "href": "Presentation.html#what-is-a-parentchild-format-2",
+    "title": "Report Generation with Quarto",
+    "section": "What is a Parent/Child format",
+    "text": "What is a Parent/Child format\n\n\n\n\n\n\n\nG\n\n\n\na1\n\nAll Score Data For\nUniversity XYZ\n\n\n\na2\n\nReport for\nEnglish\n\n\n\na1-&gt;a2\n\n\n\n\n\na3\n\nReport for\nHistory\n\n\n\na1-&gt;a3\n\n\n\n\n\na4\n\nReport for\nBiology\n\n\n\na1-&gt;a4\n\n\n\n\n\na5\n\nReport for\nSpanish\n\n\n\na1-&gt;a5"
+  },
+  {
+    "objectID": "Presentation.html#what-is-a-parentchild-format-3",
+    "href": "Presentation.html#what-is-a-parentchild-format-3",
+    "title": "Report Generation with Quarto",
+    "section": "What is a Parent/Child format",
+    "text": "What is a Parent/Child format\n\n\n\n\n\n\n\nG\n\n\n\na1\n\nAll Score Data For\nUniversity XYZ\n\n\n\na2\n\nReport for\nEnglish\n\n\n\na1-&gt;a2\n\n\n\n\n\na3\n\nReport for\nHistory\n\n\n\na1-&gt;a3\n\n\n\n\n\na4\n\nReport for\nBiology\n\n\n\na1-&gt;a4\n\n\n\n\n\na5\n\nReport for\nSpanish\n\n\n\na1-&gt;a5"
+  },
+  {
+    "objectID": "Presentation.html#quarto",
+    "href": "Presentation.html#quarto",
+    "title": "Report Generation with Quarto",
+    "section": "Quarto",
+    "text": "Quarto\n\nQuarto is an “open-source scientific and technical publishing system”\nIn plain terms: it lets you integrate plain text markdown, code, output, and visualizations all in one document.\nAllows for a variety of outputs: PDF, HTML, Word, etc."
+  },
+  {
+    "objectID": "Presentation.html#quarto-1",
+    "href": "Presentation.html#quarto-1",
+    "title": "Report Generation with Quarto",
+    "section": "Quarto",
+    "text": "Quarto\nLet’s get started downloading it now: https://quarto.org/docs/get-started/\n\n\nI’ll also put the link to Quarto download in chat: https://quarto.org/docs/get-started/"
+  },
+  {
+    "objectID": "Presentation.html#pause-for-introductions",
+    "href": "Presentation.html#pause-for-introductions",
+    "title": "Report Generation with Quarto",
+    "section": "Pause for Introductions",
+    "text": "Pause for Introductions\n\nName\nInstitution\nGoal(s) for the workshop"
+  },
+  {
+    "objectID": "Presentation.html#code-familarity",
+    "href": "Presentation.html#code-familarity",
+    "title": "Report Generation with Quarto",
+    "section": "Code Familarity",
+    "text": "Code Familarity\n\nHow familiar are you with R/Python/coding?"
+  },
+  {
+    "objectID": "Presentation.html#dive-into-quarto",
+    "href": "Presentation.html#dive-into-quarto",
+    "title": "Report Generation with Quarto",
+    "section": "Dive into Quarto",
+    "text": "Dive into Quarto\n\n\nFrom RStudio, new “Quarto Document” or “Create a Project”\n\nFiles are a single document\nProjects are a folder"
+  },
+  {
+    "objectID": "Presentation.html#dive-into-quarto-1",
+    "href": "Presentation.html#dive-into-quarto-1",
+    "title": "Report Generation with Quarto",
+    "section": "Dive into Quarto",
+    "text": "Dive into Quarto"
+  },
+  {
+    "objectID": "Presentation.html#parts-of-a-quarto-document",
+    "href": "Presentation.html#parts-of-a-quarto-document",
+    "title": "Report Generation with Quarto",
+    "section": "Parts of a Quarto Document",
+    "text": "Parts of a Quarto Document\n\nHere is what a new(?) Quarto Document looks like, lets break each part down {maybe make a dummy quarto?}\n\n---\ntitle: \"Untitled\"\nformat: html\neditor: visual\n---\n\n## Quarto\n\nQuarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see &lt;https://quarto.org&gt;.\n\n## Running Code\n\nWhen you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:\n\n\n```{r}\n1 + 1\n```\n\n\nYou can add options to executable code like this\n\n\n\n```{r}\n#| echo: false\n2 * 2\n```\n\n\n\nThe `echo: false` option disables the printing of code (only output is displayed)."
+  },
+  {
+    "objectID": "Presentation.html#rendered-form",
+    "href": "Presentation.html#rendered-form",
+    "title": "Report Generation with Quarto",
+    "section": "Rendered Form",
+    "text": "Rendered Form"
+  },
+  {
+    "objectID": "Presentation.html#parts-of-a-quarto-document-the-yaml-header",
+    "href": "Presentation.html#parts-of-a-quarto-document-the-yaml-header",
+    "title": "Report Generation with Quarto",
+    "section": "Parts of a Quarto Document: the YAML header",
+    "text": "Parts of a Quarto Document: the YAML header\n---\ntitle: \"Untitled\"\nformat: html\neditor: visual\n---"
+  },
+  {
+    "objectID": "Presentation.html#parts-of-a-quarto-document-the-yaml-header-1",
+    "href": "Presentation.html#parts-of-a-quarto-document-the-yaml-header-1",
+    "title": "Report Generation with Quarto",
+    "section": "Parts of a Quarto Document: the YAML header",
+    "text": "Parts of a Quarto Document: the YAML header\n---\ntitle: \"Report Generation with Quarto\"\nauthor: Laura Lambert & Josiah Hunsberger\ninstitute: James Madison University\nformat: \n  revealjs:\n    theme: default\n    slide-tone: false\n    preview-links: auto\ntitle-slide-attributes:\n      data-background-image: rsz_1rsz_lakeview_overview.jpg\n      data-background-opacity: \"0.5\"\n---\n\nThis is where global document rules go\nVisual editor warning - can mess with formatting when switching back and forth (?)"
+  },
+  {
+    "objectID": "Presentation.html#parts-of-a-quarto-document-code-chunks",
+    "href": "Presentation.html#parts-of-a-quarto-document-code-chunks",
+    "title": "Report Generation with Quarto",
+    "section": "Parts of a Quarto Document: Code Chunks",
+    "text": "Parts of a Quarto Document: Code Chunks\n```{r}\n#Call libraries \nlibrary(tidyverse) \n\n#Read in data\ndata(iris)\n\n#Summarize data by species\niris |&gt;\n  group_by(Species) |&gt;\n  summarise(mean_pw = mean(Petal.Width), sd_pw = sd(Petal.Width))\n\n```\nCode chunks work just like code in a script file - you can have code, comments, functions, etc.\n\nUnlike in a script file, you set off code chunks with three back-ticks"
+  },
+  {
+    "objectID": "Presentation.html#parts-of-a-quarto-document-text",
+    "href": "Presentation.html#parts-of-a-quarto-document-text",
+    "title": "Report Generation with Quarto",
+    "section": "Parts of a Quarto Document: Text",
+    "text": "Parts of a Quarto Document: Text\n\nYou can type text just as in a text editor\nDifferent levels of header are identified with # (##, ###, etc.)\nYou can make text bold by sandwiching between ** and italic with *"
+  },
+  {
+    "objectID": "Presentation.html#parts-of-a-quarto-document-text-code",
+    "href": "Presentation.html#parts-of-a-quarto-document-text-code",
+    "title": "Report Generation with Quarto",
+    "section": "Parts of a Quarto Document: Text + Code",
+    "text": "Parts of a Quarto Document: Text + Code\n\nQuarto allows for inline code evaluation\n\nIntegrates objects or values calculated in a previous code chunk with text\n\nHelps avoid needing to go back and find every instance of a value if it has changed!"
+  },
+  {
+    "objectID": "Presentation.html#parts-of-a-quarto-document-math-and-symbols",
+    "href": "Presentation.html#parts-of-a-quarto-document-math-and-symbols",
+    "title": "Report Generation with Quarto",
+    "section": "Parts of a Quarto Document: Math and Symbols",
+    "text": "Parts of a Quarto Document: Math and Symbols\n\nLaTeX makes math and symbols easy\nSandwich math and/or symbol expressions between $: $ MATH $\nKeep a cheat-sheet on your desk!\n\n\nDrop link to cheat-sheet"
+  },
+  {
+    "objectID": "Presentation.html#parts-of-a-quarto-document-math-and-symbols-1",
+    "href": "Presentation.html#parts-of-a-quarto-document-math-and-symbols-1",
+    "title": "Report Generation with Quarto",
+    "section": "Parts of a Quarto Document: Math and Symbols",
+    "text": "Parts of a Quarto Document: Math and Symbols\n$\\sigma^{2}$ = \\(\\sigma^{2}\\)\nand\n$$y = mx + b$$ renders into \\[y = mx + b\\]\nIt looks weird in your raw file - there’s a bit of trust the process that goes on!"
+  },
+  {
+    "objectID": "Presentation.html#customizing-code-chunks-language",
+    "href": "Presentation.html#customizing-code-chunks-language",
+    "title": "Report Generation with Quarto",
+    "section": "Customizing Code Chunks: Language",
+    "text": "Customizing Code Chunks: Language\n```{r}\n#Call libraries \nlibrary(tidyverse) \n\n#Read in data\ndata(iris)\n\n#Summarize data by species\niris |&gt;\n  group_by(Species) |&gt;\n  summarise(mean_pw = mean(Petal.Width), sd_pw = sd(Petal.Width))\n\n```"
+  },
+  {
+    "objectID": "Presentation.html#customizing-code-chunks-language-1",
+    "href": "Presentation.html#customizing-code-chunks-language-1",
+    "title": "Report Generation with Quarto",
+    "section": "Customizing Code Chunks: Language",
+    "text": "Customizing Code Chunks: Language\n```{dot}\ndigraph Gr {\n    rankdir = TD\n    node [\n        style = filled\n        shape = oval]\n\n  a1 -&gt; {a2 a3};\n  a2 -&gt; a4;\n  a3 -&gt; a5;\n  {a4 a5} -&gt; a6\n\n\n  a1[label = \"Some Topic\" fillcolor=white]\n  a2[label = \"Sub-Topic 1\" ]\n  a3[label = \"Sub-Topic 2\"]\n  a4[label = \"Some Other Topic\" fontcolor=red]\n  a5[label = \"Yet Another\\nTopic\" fillcolor=\"#7AD151FF\"]\n  a6[label = \"A Final Topic\"]\n  \n}\n```"
+  },
+  {
+    "objectID": "Presentation.html#customizing-code-chunks-language-2",
+    "href": "Presentation.html#customizing-code-chunks-language-2",
+    "title": "Report Generation with Quarto",
+    "section": "Customizing Code Chunks: Language",
+    "text": "Customizing Code Chunks: Language\n\n\n\n\n\n\n\nGr\n\n\n\na1\n\nSome Topic\n\n\n\na2\n\nSub-Topic 1\n\n\n\na1-&gt;a2\n\n\n\n\n\na3\n\nSub-Topic 2\n\n\n\na1-&gt;a3\n\n\n\n\n\na4\n\nSome Other Topic\n\n\n\na2-&gt;a4\n\n\n\n\n\na5\n\nYet Another\nTopic\n\n\n\na3-&gt;a5\n\n\n\n\n\na6\n\nA Final Topic\n\n\n\na4-&gt;a6\n\n\n\n\n\na5-&gt;a6"
+  },
+  {
+    "objectID": "Presentation.html#customizing-code-chunks-language-3",
+    "href": "Presentation.html#customizing-code-chunks-language-3",
+    "title": "Report Generation with Quarto",
+    "section": "Customizing Code Chunks: Language",
+    "text": "Customizing Code Chunks: Language\n```{python}\n#Import dependencies\nimport pandas as pd\n\n#Read in data\nPretest = pd.read_table(\"Fa23_instructor1.xls\")\n\nPosttest = pd.read_table(\"Sp24_instructor1.xls\")\n\n#Merge on student name\nTotal = pd.merge(Pretest, Posttest, on = 'STUDENT NAME')\n\n```"
+  },
+  {
+    "objectID": "Presentation.html#customizing-code-chunks-options",
+    "href": "Presentation.html#customizing-code-chunks-options",
+    "title": "Report Generation with Quarto",
+    "section": "Customizing Code Chunks: Options",
+    "text": "Customizing Code Chunks: Options\n```{r}\n#| echo: TRUE\n#| eval: FALSE\n#| message: FALSE\n#| warning: FALSE\n\n#Call libraries \nlibrary(tidyverse) \n\n#Read in data\ndata(iris)\n\n#Summarize data by species\niris |&gt;\n  group_by(Species) |&gt;\n  summarise(mean_pw = mean(Petal.Width), sd_pw = sd(Petal.Width))\n\n```"
+  },
+  {
+    "objectID": "Presentation.html#customizing-code-chunks-options-1",
+    "href": "Presentation.html#customizing-code-chunks-options-1",
+    "title": "Report Generation with Quarto",
+    "section": "Customizing Code Chunks: Options",
+    "text": "Customizing Code Chunks: Options\n```{r}\n#| echo: TRUE\n#| eval: FALSE\n\n#Summarize data by species\niris |&gt;\n  group_by(Species) |&gt;\n  summarise(mean_pw = mean(Petal.Width), sd_pw = sd(Petal.Width))\n\n```"
+  },
+  {
+    "objectID": "Presentation.html#customizing-code-chunks-options-2",
+    "href": "Presentation.html#customizing-code-chunks-options-2",
+    "title": "Report Generation with Quarto",
+    "section": "Customizing Code Chunks: Options",
+    "text": "Customizing Code Chunks: Options\n\n#Summarize data by species\niris |&gt;\n  group_by(Species) |&gt;\n  summarise(mean_pw = mean(Petal.Width), sd_pw = sd(Petal.Width))"
+  },
+  {
+    "objectID": "Presentation.html#customizing-code-chunks-options-3",
+    "href": "Presentation.html#customizing-code-chunks-options-3",
+    "title": "Report Generation with Quarto",
+    "section": "Customizing Code Chunks: Options",
+    "text": "Customizing Code Chunks: Options\n```{r}\n#| echo: FALSE\n#| eval: TRUE\n\n#Summarize data by species\niris |&gt;\n  group_by(Species) |&gt;\n  summarise(mean_pw = mean(Petal.Width), sd_pw = sd(Petal.Width))\n\n```"
+  },
+  {
+    "objectID": "Presentation.html#customizing-code-chunks-options-4",
+    "href": "Presentation.html#customizing-code-chunks-options-4",
+    "title": "Report Generation with Quarto",
+    "section": "Customizing Code Chunks: Options",
+    "text": "Customizing Code Chunks: Options\n\n\n# A tibble: 3 × 3\n  Species    mean_pw sd_pw\n  &lt;fct&gt;        &lt;dbl&gt; &lt;dbl&gt;\n1 setosa       0.246 0.105\n2 versicolor   1.33  0.198\n3 virginica    2.03  0.275"
+  },
+  {
+    "objectID": "Presentation.html#output-options",
+    "href": "Presentation.html#output-options",
+    "title": "Report Generation with Quarto",
+    "section": "Output Options",
+    "text": "Output Options\n---\ntitle: \"Some Creative Title\"\nauthor: Your Name\nformat: pdf \n---"
+  },
+  {
+    "objectID": "Presentation.html#output-options-1",
+    "href": "Presentation.html#output-options-1",
+    "title": "Report Generation with Quarto",
+    "section": "Output Options",
+    "text": "Output Options\n---\ntitle: \"Some Creative Title\"\nauthor: Your Name\ntoc: TRUE\nformat: html \n---\n\nIf rendering to html, need a place to host. quartopub is a free, public place. As is github pages. Considerations…."
+  },
+  {
+    "objectID": "Presentation.html#activity",
+    "href": "Presentation.html#activity",
+    "title": "Report Generation with Quarto",
+    "section": "Activity",
+    "text": "Activity\n\nCreate a basic Quarto Document (.qmd)\n\nWrite a few lines of text\nAdd a code chunk to analyze a built-in dataset (e.g. iris, mtcars, etc.)\nCustomize your output\n\nWe will work in break-out rooms\n\nShare and troubleshoot"
+  },
+  {
+    "objectID": "Presentation.html#parentchild-file-structure",
+    "href": "Presentation.html#parentchild-file-structure",
+    "title": "Report Generation with Quarto",
+    "section": "Parent/Child File Structure",
+    "text": "Parent/Child File Structure\n\nTwo files:\n\n“Parent” file contains global settings\n“Child” file contains modular components for disaggregated reporting\n\nProject structure can be super helpful here"
+  },
+  {
+    "objectID": "Presentation.html#parent-file",
+    "href": "Presentation.html#parent-file",
+    "title": "Report Generation with Quarto",
+    "section": "Parent File",
+    "text": "Parent File\n\nLoad your libraries\n\n```{r Libraries}\n#| warning: FALSE\n#| message: FALSE\n\nrequired_packages &lt;- c(\"tidyverse\", \"ggplot2\", \"openxlsx\", \"psych\", \"stringr\")\n\n# Check and install packages if needed\nfor (pkg in required_packages) {\n  if (!requireNamespace(pkg, quietly = TRUE)) {\n    install.packages(pkg)\n    library(pkg, character.only = TRUE)\n  } else {\n    library(pkg, character.only = TRUE)\n  }\n}\n```"
+  },
+  {
+    "objectID": "Presentation.html#parent-file-1",
+    "href": "Presentation.html#parent-file-1",
+    "title": "Report Generation with Quarto",
+    "section": "Parent File",
+    "text": "Parent File\n\nSpecify Folders\n\n```{r Folders}\n\n# The first line creates a \"parent folder\" named \"Reports\" in the current working directory.\n# The second line creates a \"subfolder\" named \"Tables\" within the \"Reports\" folder.\n\ndir.create(\"./Reports\") # Creates the \"Reports\" folder in the current working directory\ndir.create(\"./Reports/Excel Workbooks\") # Creates the \"Tables\" subfolder within the \"Reports\" folder\n\n# The \"Tables\" subfolder is useful if saving out Excel sheets for each assessment. This is helpful when dealing with a large number of assessments as well as a large number of automated reports.\n\ndir.create(\"./Data\") # Creates a folder to house data files to maintain a consistent folder structure for year-to-year or semester-to-semester reporting\n\ndir.create(\"./Children\") # Creates a folder to house the child/children files we will create\n```\n\nCan use getwd() to remind yourself where R thinks you are\nProjects are a good idea"
+  },
+  {
+    "objectID": "Presentation.html#parent-file-2",
+    "href": "Presentation.html#parent-file-2",
+    "title": "Report Generation with Quarto",
+    "section": "Parent File",
+    "text": "Parent File\n\nSpecify File Paths\n\nQuarto doesn’t love this when rendering\n\n\n```{r File Paths}\n\n# Define file paths for a project folder structure\n\n# The base path is set to the current working directory using \"./\".\n# All subsequent file paths are constructed relative to this base path.\n\npath &lt;- \"./\"  # Base path representing the current working directory\n\n# File paths for specific subdirectories:\nChildren_file_path &lt;- paste0(path, \"Children/\") # Path for the \"Children\" folder\ndata_file_path &lt;- paste0(path, \"Data/\")         # Path for the \"Data\" folder\nreport_file_path &lt;- paste0(path, \"Reports/\")    # Path for the \"Reports\" folder\n\n\n# Specify the data file name below\n# Housing in the parent file enables for higher flexibility of the Child file\ndata_file_name &lt;- \"Data_Large\"\n\n```"
+  },
+  {
+    "objectID": "Presentation.html#parent-file-3",
+    "href": "Presentation.html#parent-file-3",
+    "title": "Report Generation with Quarto",
+    "section": "Parent File",
+    "text": "Parent File\n\nSpecify which variables to use in your dataset (e.g. “Program”, “School”, “Year”, etc.)\n\n```{r Factors}\nprobe &lt;- read.xlsx(paste0(data_file_path, \"Data.xlsx\"))\n\n# This is a simple simulated data set that is likely not reflective of real data; however, you can may already know how you want to segment your data for reporting.\n\n# Select only the columns with character data - Since our classifying characteristics (e.g., Year, Semester, Program) are the only character values this is a quick and easy way to isolate out values.\nprobe &lt;- probe[, sapply(probe, is.character)]\n\nunique_values &lt;- lapply(probe, unique)\n\n```"
+  },
+  {
+    "objectID": "Presentation.html#parent-file-4",
+    "href": "Presentation.html#parent-file-4",
+    "title": "Report Generation with Quarto",
+    "section": "Parent File",
+    "text": "Parent File\n\nLoad your libraries\nSpecify Folders\nSpecify File Paths\nSpecify which variables to use in your dataset (e.g. “Program”, “School”, “Year”, etc.)\nDETOUR: make child file!!"
+  },
+  {
+    "objectID": "Presentation.html#parent-file-5",
+    "href": "Presentation.html#parent-file-5",
+    "title": "Report Generation with Quarto",
+    "section": "Parent File",
+    "text": "Parent File\n\nRun child file\n\n```{r Child}\n\n#Program Specific\nprograms &lt;- unique_values$Program # Pulling from out unique_values list\n\nfor (i in 1:length(programs)) {\n  program_name &lt;- programs[i]\n  output_file_name &lt;- paste0(program_name, \"_Report.docx\")\n  output_path &lt;- file.path(report_file_path, output_file_name)\n  # Use the Value names specified in the latest for loop\n  # This will vary the name of the file output for each group analyzed\n  quarto::quarto_render(\n    # The name of the Child file you are using\n    input = \"Child_101.qmd\",\n    # The naming convention of the output file defined above\n    output_file = output_file_name,\n    # params are the list of parameters ported over from the Parent file into the Child file.\n    # You must update the YAML header under \"params\" to reflect the variables you are porting over.\n    execute_params = list(program_name = program_name)\n  )\n  \n  #Moves the file to the correct folder (i.e. Reports)\n  file.rename(output_file_name, output_path)\n}\n```"
+  },
+  {
+    "objectID": "Presentation.html#basic-child-file",
+    "href": "Presentation.html#basic-child-file",
+    "title": "Report Generation with Quarto",
+    "section": "Basic Child File",
+    "text": "Basic Child File\n\nYAML header\n\n---\ntitle: \"Score Report\"\nformat: docx\ntoc: true\nparams:\n  program_name: NA\n  # If adding more or different parameters (e.g., Year, Semester) will need to add to or change the params list.\n---\n\nThis is SUPER important - where you specify your format, title, and what parameters you’ll be using"
+  },
+  {
+    "objectID": "Presentation.html#basic-child-file-1",
+    "href": "Presentation.html#basic-child-file-1",
+    "title": "Report Generation with Quarto",
+    "section": "Basic Child File",
+    "text": "Basic Child File\n\nSetup options\n\n```{r setup}\n#| echo: FALSE\n#| warning: FALSE\n#| message: FALSE\n\nknitr::opts_chunk$set(error=FALSE)\n\noptions(digits = 3) # Setting the number of digits for the entire document\n\nlibrary(openxlsx)\nlibrary(tidyverse)\n```"
+  },
+  {
+    "objectID": "Presentation.html#basic-child-file-2",
+    "href": "Presentation.html#basic-child-file-2",
+    "title": "Report Generation with Quarto",
+    "section": "Basic Child File",
+    "text": "Basic Child File\n\nIdentify variable(s) to disaggregate on\n\n```{r Identifying Program}\n#| echo: FALSE\n\nprogram &lt;- params$program_name\n```"
+  },
+  {
+    "objectID": "Presentation.html#basic-child-file-3",
+    "href": "Presentation.html#basic-child-file-3",
+    "title": "Report Generation with Quarto",
+    "section": "Basic Child File",
+    "text": "Basic Child File\n\nDo the analysis!\n(Advanced: add tables and graphs)\n\n```{r DateBlock}\n#| echo: FALSE\n#| eval: TRUE\n#| message: FALSE\n\n#This will print from the code - not super pretty\nAnalysis &lt;- print(paste(\"This analysis was conducted on\", program, \"data\"))\n\n#This is saving as objects for use in inline code\ncurrent_date &lt;- format(Sys.Date(), \"%B %d, %Y\")\n\nDate &lt;- print(paste0(\"This Report was generated on \", current_date))\n\n```"
+  },
+  {
+    "objectID": "Presentation.html#basic-child-file-4",
+    "href": "Presentation.html#basic-child-file-4",
+    "title": "Report Generation with Quarto",
+    "section": "Basic Child File",
+    "text": "Basic Child File\n```{r Total}\n#| echo: FALSE\n\n#Read in the data\ndata &lt;- read.xlsx(\"./Data/Data_Large.xlsx\")\n\n#Filter by program\nfiltered_data &lt;- data |&gt;\n  filter(Program == program)\n\n#Make a total score\nfiltered_data$total &lt;- rowSums(filtered_data[5:16])\n\n```"
+  },
+  {
+    "objectID": "Presentation.html#basic-child-file-5",
+    "href": "Presentation.html#basic-child-file-5",
+    "title": "Report Generation with Quarto",
+    "section": "Basic Child File",
+    "text": "Basic Child File\n\nClean up the environment\n\n```{r Cleaning up Global Environment}\n#| echo: FALSE\n\nrm(list = ls()[sapply(mget(ls()), is.data.frame)])\nrm(ft, p, new_columns)\n```"
+  },
+  {
+    "objectID": "Presentation.html#walkthrough-of-a-document",
+    "href": "Presentation.html#walkthrough-of-a-document",
+    "title": "Report Generation with Quarto",
+    "section": "Walkthrough of a Document",
+    "text": "Walkthrough of a Document"
+  },
+  {
+    "objectID": "Presentation.html#activity-1",
+    "href": "Presentation.html#activity-1",
+    "title": "Report Generation with Quarto",
+    "section": "Activity",
+    "text": "Activity\nUsing the provided guide parent/child files:\n\nModify the Parent file:\n\nUse the iris dataset (built in to R)\nIndicate the variable to iterate over (HINT: only one is a factor!)\n(Bonus!) Specify file paths for output, data, etc.\n\nModify the Child file:\n\nGenerate reports dynamically for each “program”"
+  },
+  {
+    "objectID": "Presentation.html#advanced-data-analysis",
+    "href": "Presentation.html#advanced-data-analysis",
+    "title": "Report Generation with Quarto",
+    "section": "Advanced Data Analysis",
+    "text": "Advanced Data Analysis\n\nWe started with just one param (program)\nWe also didn’t generate any tables/graphs\nOnce you have your base Parent/Child files, you can easily add to them\nAdvanced data analysis all goes in the Child file"
+  },
+  {
+    "objectID": "Presentation.html#using-tidyversedplyr",
+    "href": "Presentation.html#using-tidyversedplyr",
+    "title": "Report Generation with Quarto",
+    "section": "Using Tidyverse/dplyr",
+    "text": "Using Tidyverse/dplyr\n```{r Average Score Table}\n#| echo: FALSE\n\n# Filtering by program\nfiltered_df &lt;- data %&gt;% \n  filter(Program == program, Year == Years, Semester == Sem)\n\n# Creating Total score\n\nfiltered_df$Tot &lt;- rowSums(filtered_df[5:16])\n\naggregated_df &lt;- filtered_df %&gt;%\n  group_by(Year) %&gt;%\n  summarise(Average_Score = mean(Tot, na.rm = TRUE))\n\n```"
+  },
+  {
+    "objectID": "Presentation.html#adding-in-graphs-with-ggplot",
+    "href": "Presentation.html#adding-in-graphs-with-ggplot",
+    "title": "Report Generation with Quarto",
+    "section": "Adding in Graphs with ggplot",
+    "text": "Adding in Graphs with ggplot\n```{r Average Score Graph}\n#| echo: FALSE\n#| warning: FALSE\n\nggplot(filtered_df, aes(x = Tot, fill = Year)) +\n  geom_histogram(aes(y = ..density..), alpha = 0.5, bins = 30, position = \"identity\") +\n  geom_density(aes(color = Year, fill = Year), alpha = 0.5, linewidth = 1) +\n  scale_fill_manual(values = c(\"First\" = \"#450084\", \"Second\" = \"#CBB677\")) +\n  scale_color_manual(values = c(\"First\" = \"#450084\", \"Second\" = \"#CBB677\")) +\n  theme_minimal() +\n  labs(title = \"Distribution of Total Scores\", x = \"Total Scores\", y = \"Density\")\n```"
+  },
+  {
+    "objectID": "Presentation.html#adding-in-tables-with-flextable",
+    "href": "Presentation.html#adding-in-tables-with-flextable",
+    "title": "Report Generation with Quarto",
+    "section": "Adding in Tables with Flextable",
+    "text": "Adding in Tables with Flextable\n```{r Average Score Table}\n#| echo: FALSE\n\n# Filtering by program\nfiltered_df &lt;- data %&gt;% \n  filter(Program == program, Year == Years, Semester == Sem)\n\n# Creating Total score\n\nfiltered_df$Tot &lt;- rowSums(filtered_df[5:16])\n\naggregated_df &lt;- filtered_df %&gt;%\n  group_by(Year) %&gt;%\n  summarise(Average_Score = mean(Tot, na.rm = TRUE))\n\n# Print out to table\nflextable(aggregated_df)\n```"
+  },
+  {
+    "objectID": "Presentation.html#looping-over-multiple-parameters",
+    "href": "Presentation.html#looping-over-multiple-parameters",
+    "title": "Report Generation with Quarto",
+    "section": "Looping over multiple parameters",
+    "text": "Looping over multiple parameters\n```{r Child}\n\n#Program Specific\nProgram_list &lt;- unique_values$Program # Pulling from out unique_values list\nYear_list &lt;- unique_values$Year # Pulling from out unique_values list\nSemesters_list &lt;- unique_values$Semester # Pulling from out unique_values list\n\n# Staged loop: Looping through Years, Semesters, and Programs\nfor (i in 1:length(Year_list)) {\n  for (j in 1:length(Semesters_list)) {\n    for (k in 1:length(Program_list)) {\n      Year &lt;- Year_list[i]\n      Sem &lt;- Semesters_list[j]\n      program_name &lt;- Program_list[k]\n        # Use the Value names specified in the latest for loop\n        # This will vary the name of the file output for each group analyzed\n      output_file_name &lt;- paste0(program_name, \"_\", Year, \"_\", Sem, \"_Report.docx\")\n      output_path &lt;- file.path(report_file_path, output_file_name)\n    \n      quarto::quarto_render(\n        # The name of the Child file you are using\n        input = \"Child_501.qmd\",\n        # The naming convention of the output file defined above\n        output_file = output_file_name,\n        # params are the list of parameters ported over from the Parent file into the Child file.\n        # You must update the YAML header under \"params\" to reflect the variables you are porting over.\n        execute_params = list(program_name = program_name, Year = Year, Sem = Sem)\n      )\n      \n      #Move the file to the correct location\n      file.rename(output_file_name, output_path)\n    }\n  }\n}\n```"
+  },
+  {
+    "objectID": "Presentation.html#looping-over-multiple-parameters-1",
+    "href": "Presentation.html#looping-over-multiple-parameters-1",
+    "title": "Report Generation with Quarto",
+    "section": "Looping over multiple parameters",
+    "text": "Looping over multiple parameters\n---\ntitle: \"Program_Gen_File\"\nformat: docx\ntoc: true\nparams:\n  program_name: NA\n  Year: NA\n  Sem: NA\n  # If adding more or different parameters (e.g., Year, Semester) will need to add to or change the params list.\n---"
+  },
+  {
+    "objectID": "Presentation.html#looping-over-multiple-parameters-2",
+    "href": "Presentation.html#looping-over-multiple-parameters-2",
+    "title": "Report Generation with Quarto",
+    "section": "Looping over multiple parameters",
+    "text": "Looping over multiple parameters\n```{r Specifying Params}\n#| echo: FALSE\n\nprogram &lt;- params$program_name\nYears &lt;- params$Year\nSem &lt;- params$Sem\n\n```"
+  },
+  {
+    "objectID": "Presentation.html#activity-2",
+    "href": "Presentation.html#activity-2",
+    "title": "Report Generation with Quarto",
+    "section": "Activity",
+    "text": "Activity\nUsing the guide parent/child files from your last activity:\n\nRead in the “Data_Large.xlsx” file\nIterate over programs\n\nReload guide file if you’d like to have that framework\n\nAdd an analysis section to your Child file:\n\nSummarize filtered data by one variable\nCreate a table and/or a plot\n\nUse quarto::quarto_render() to produce all reports"
+  },
+  {
+    "objectID": "Presentation.html#wrapping-up",
+    "href": "Presentation.html#wrapping-up",
+    "title": "Report Generation with Quarto",
+    "section": "Wrapping Up",
+    "text": "Wrapping Up\n\nSometimes, things don’t quite go right\n\nError messages are shockingly useful\n\nGetting your formatting correct can also be a challenge\n\nLarge tables are a pain"
+  },
+  {
+    "objectID": "Presentation.html#wrapping-up-1",
+    "href": "Presentation.html#wrapping-up-1",
+    "title": "Report Generation with Quarto",
+    "section": "Wrapping Up",
+    "text": "Wrapping Up\n\nIntegrating code, text, and files into a report aids in flexibility and reproducibility\nQuarto is one tool to accomplish this\n\nLess copy/pasting numbers, graphs, and tables"
+  },
+  {
+    "objectID": "Presentation.html#wrapping-up-2",
+    "href": "Presentation.html#wrapping-up-2",
+    "title": "Report Generation with Quarto",
+    "section": "Wrapping Up",
+    "text": "Wrapping Up\n\nQuarto can be used to automate report generation\n\nDocumentation\nDisaggregation\n\nIntegrate reports and data analysis\nFlexibility of code language, text, and LaTeX"
+  },
+  {
+    "objectID": "Presentation.html#questions",
+    "href": "Presentation.html#questions",
+    "title": "Report Generation with Quarto",
+    "section": "Questions?",
+    "text": "Questions?"
+  },
+  {
+    "objectID": "Presentation.html#stay-in-touch",
+    "href": "Presentation.html#stay-in-touch",
+    "title": "Report Generation with Quarto",
+    "section": "Stay in Touch!",
+    "text": "Stay in Touch!\nLaura Lambert\nlaycocla@jmu.edu"
+  }
+]

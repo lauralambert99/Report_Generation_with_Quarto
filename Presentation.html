@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html lang="en"><head>
-<script src="Presentation_files/libs/clipboard/clipboard.min.js"></script>
-<script src="Presentation_files/libs/quarto-html/tabby.min.js"></script>
-<script src="Presentation_files/libs/quarto-html/popper.min.js"></script>
-<script src="Presentation_files/libs/quarto-html/tippy.umd.min.js"></script>
-<link href="Presentation_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="Presentation_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="Presentation_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
-<link href="Presentation_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-html/tabby.min.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.5.57">
 
   <meta name="author" content="Laura Lambert &amp; Josiah Hunsberger">
-  <title>Report Generation with Quarto</title>
+  <title>Presentation – Report Generation with Quarto</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="stylesheet" href="Presentation_files/libs/revealjs/dist/reset.css">
-  <link rel="stylesheet" href="Presentation_files/libs/revealjs/dist/reveal.css">
+  <link rel="stylesheet" href="site_libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="site_libs/revealjs/dist/reveal.css">
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -95,11 +95,11 @@
     code span.vs { color: #20794d; } /* VerbatimString */
     code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="Presentation_files/libs/revealjs/dist/theme/quarto.css">
-  <link href="Presentation_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
-  <link href="Presentation_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
-  <link href="Presentation_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
-  <link href="Presentation_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto.css">
+  <link href="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
   <style type="text/css">
 
   .callout {
@@ -405,8 +405,8 @@ Laura Lambert &amp; Josiah Hunsberger
 </div>
 
 </section>
-<section id="welcome" class="slide level2" data-auto-animate="true">
-<h2 data-id="quarto-animate-title">Welcome!</h2>
+<section id="welcome" class="slide level2">
+<h2>Welcome!</h2>
 <div>
 <p>Road map for this session:</p>
 <ol type="1">
@@ -435,12 +435,12 @@ Laura Lambert &amp; Josiah Hunsberger
 <section id="general-housekeeping" class="slide level2">
 <h2>General Housekeeping</h2>
 <ul>
-<li><p>Please feel free to put questions in the chat as they come up</p></li>
+<li><p>Please feel free to put questions in the chat as they come up or use ‘raise hand’</p></li>
 <li><p>It is assumed you have R and RStudio installed on your machines - if not, there’s time to do it now!</p></li>
 <li><p>We will install Quarto shortly</p></li>
 </ul>
 <aside class="notes">
-<p>I’ll drop the link to get R/RStudio in the chat [GET THIS!]</p>
+<p>I’ll drop the link to get R/RStudio in the chat</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -467,7 +467,7 @@ Laura Lambert &amp; Josiah Hunsberger
 <h2>Why Automated Reporting?</h2>
 <div>
 <p>Let’s ask a different question:</p>
-<p>How do you currently analyze your data? (answers may be along the lines of Excel workbooks, SPSS dropdowns, SPSS syntax, R, Python, SAS, etc.)</p>
+<p>How do you currently analyze your data? (answers might be along the lines of Excel workbooks, SPSS dropdowns, SPSS syntax, R, Python, SAS, etc.)</p>
 </div>
 <aside class="notes">
 <p>Put your answer in chat</p>
@@ -830,38 +830,38 @@ Laura Lambert &amp; Josiah Hunsberger
           overflow: hidden!important;
           display:block!important;
       }</style></aside>
-<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href=""></a><span class="co">---</span></span>
-<span id="cb1-2"><a href=""></a><span class="an">title:</span><span class="co"> "Untitled"</span></span>
-<span id="cb1-3"><a href=""></a><span class="an">format:</span><span class="co"> html</span></span>
-<span id="cb1-4"><a href=""></a><span class="an">editor:</span><span class="co"> visual</span></span>
-<span id="cb1-5"><a href=""></a><span class="co">---</span></span>
-<span id="cb1-6"><a href=""></a></span>
-<span id="cb1-7"><a href=""></a><span class="fu">## Quarto</span></span>
-<span id="cb1-8"><a href=""></a></span>
-<span id="cb1-9"><a href=""></a>Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <span class="ot">&lt;https://quarto.org&gt;</span>.</span>
-<span id="cb1-10"><a href=""></a></span>
-<span id="cb1-11"><a href=""></a><span class="fu">## Running Code</span></span>
-<span id="cb1-12"><a href=""></a></span>
-<span id="cb1-13"><a href=""></a>When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:</span>
-<span id="cb1-14"><a href=""></a></span>
-<span id="cb1-15"><a href=""></a></span>
-<span id="cb1-16"><a href=""></a><span class="in">```{r}</span></span>
-<span id="cb1-17"><a href=""></a><span class="in">1 + 1</span></span>
-<span id="cb1-18"><a href=""></a><span class="in">```</span></span>
-<span id="cb1-19"><a href=""></a></span>
-<span id="cb1-20"><a href=""></a></span>
-<span id="cb1-21"><a href=""></a>You can add options to executable code like this</span>
-<span id="cb1-22"><a href=""></a></span>
-<span id="cb1-23"><a href=""></a></span>
-<span id="cb1-24"><a href=""></a></span>
-<span id="cb1-25"><a href=""></a><span class="in">```{r}</span></span>
-<span id="cb1-26"><a href=""></a><span class="in">#| echo: false</span></span>
-<span id="cb1-27"><a href=""></a><span class="in">2 * 2</span></span>
-<span id="cb1-28"><a href=""></a><span class="in">```</span></span>
-<span id="cb1-29"><a href=""></a></span>
-<span id="cb1-30"><a href=""></a></span>
-<span id="cb1-31"><a href=""></a></span>
-<span id="cb1-32"><a href=""></a>The <span class="in">`echo: false`</span> option disables the printing of code (only output is displayed).</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a></a><span class="co">---</span></span>
+<span id="cb1-2"><a></a><span class="an">title:</span><span class="co"> "Untitled"</span></span>
+<span id="cb1-3"><a></a><span class="an">format:</span><span class="co"> html</span></span>
+<span id="cb1-4"><a></a><span class="an">editor:</span><span class="co"> visual</span></span>
+<span id="cb1-5"><a></a><span class="co">---</span></span>
+<span id="cb1-6"><a></a></span>
+<span id="cb1-7"><a></a><span class="fu">## Quarto</span></span>
+<span id="cb1-8"><a></a></span>
+<span id="cb1-9"><a></a>Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <span class="ot">&lt;https://quarto.org&gt;</span>.</span>
+<span id="cb1-10"><a></a></span>
+<span id="cb1-11"><a></a><span class="fu">## Running Code</span></span>
+<span id="cb1-12"><a></a></span>
+<span id="cb1-13"><a></a>When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:</span>
+<span id="cb1-14"><a></a></span>
+<span id="cb1-15"><a></a></span>
+<span id="cb1-16"><a></a><span class="in">```{r}</span></span>
+<span id="cb1-17"><a></a><span class="in">1 + 1</span></span>
+<span id="cb1-18"><a></a><span class="in">```</span></span>
+<span id="cb1-19"><a></a></span>
+<span id="cb1-20"><a></a></span>
+<span id="cb1-21"><a></a>You can add options to executable code like this</span>
+<span id="cb1-22"><a></a></span>
+<span id="cb1-23"><a></a></span>
+<span id="cb1-24"><a></a></span>
+<span id="cb1-25"><a></a><span class="in">```{r}</span></span>
+<span id="cb1-26"><a></a><span class="in">#| echo: false</span></span>
+<span id="cb1-27"><a></a><span class="in">2 * 2</span></span>
+<span id="cb1-28"><a></a><span class="in">```</span></span>
+<span id="cb1-29"><a></a></span>
+<span id="cb1-30"><a></a></span>
+<span id="cb1-31"><a></a></span>
+<span id="cb1-32"><a></a>The <span class="in">`echo: false`</span> option disables the printing of code (only output is displayed).</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="rendered-form" class="slide level2">
 <h2>Rendered Form</h2>
@@ -907,19 +907,19 @@ title-slide-attributes:
 </section>
 <section id="parts-of-a-quarto-document-code-chunks" class="slide level2">
 <h2>Parts of a Quarto Document: Code Chunks</h2>
-<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a href=""></a><span class="in">```{r}</span></span>
-<span id="cb4-2"><a href=""></a><span class="in">#Call libraries </span></span>
-<span id="cb4-3"><a href=""></a><span class="in">library(tidyverse) </span></span>
-<span id="cb4-4"><a href=""></a></span>
-<span id="cb4-5"><a href=""></a><span class="in">#Read in data</span></span>
-<span id="cb4-6"><a href=""></a><span class="in">data(iris)</span></span>
-<span id="cb4-7"><a href=""></a></span>
-<span id="cb4-8"><a href=""></a><span class="in">#Summarize data by species</span></span>
-<span id="cb4-9"><a href=""></a><span class="in">iris |&gt;</span></span>
-<span id="cb4-10"><a href=""></a><span class="in">  group_by(Species) |&gt;</span></span>
-<span id="cb4-11"><a href=""></a><span class="in">  summarise(mean_pw = mean(Petal.Width), sd_pw = sd(Petal.Width))</span></span>
-<span id="cb4-12"><a href=""></a></span>
-<span id="cb4-13"><a href=""></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a></a><span class="in">```{r}</span></span>
+<span id="cb4-2"><a></a><span class="in">#Call libraries </span></span>
+<span id="cb4-3"><a></a><span class="in">library(tidyverse) </span></span>
+<span id="cb4-4"><a></a></span>
+<span id="cb4-5"><a></a><span class="in">#Read in data</span></span>
+<span id="cb4-6"><a></a><span class="in">data(iris)</span></span>
+<span id="cb4-7"><a></a></span>
+<span id="cb4-8"><a></a><span class="in">#Summarize data by species</span></span>
+<span id="cb4-9"><a></a><span class="in">iris |&gt;</span></span>
+<span id="cb4-10"><a></a><span class="in">  group_by(Species) |&gt;</span></span>
+<span id="cb4-11"><a></a><span class="in">  summarise(mean_pw = mean(Petal.Width), sd_pw = sd(Petal.Width))</span></span>
+<span id="cb4-12"><a></a></span>
+<span id="cb4-13"><a></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Code chunks work just like code in a script file - you can have code, comments, functions, etc.</p>
 <aside class="notes">
 <p>Unlike in a script file, you set off code chunks with three back-ticks</p>
@@ -941,6 +941,16 @@ title-slide-attributes:
 <li>You can type text just as in a text editor</li>
 <li>Different levels of header are identified with # (##, ###, etc.)</li>
 <li>You can make text <strong>bold</strong> by sandwiching between ** and <em>italic</em> with *</li>
+</ul>
+</section>
+<section id="parts-of-a-quarto-document-text-code" class="slide level2">
+<h2>Parts of a Quarto Document: Text + Code</h2>
+<ul>
+<li>Quarto allows for inline code evaluation
+<ul>
+<li>Integrates objects or values calculated in a previous code chunk with text</li>
+</ul></li>
+<li>Helps avoid needing to go back and find every instance of a value if it has changed!</li>
 </ul>
 </section>
 <section id="parts-of-a-quarto-document-math-and-symbols" class="slide level2">
@@ -966,51 +976,51 @@ title-slide-attributes:
 </section>
 <section id="parts-of-a-quarto-document-math-and-symbols-1" class="slide level2">
 <h2>Parts of a Quarto Document: Math and Symbols</h2>
-<p>$\sigma^{2}$ renders into <span class="math inline">\(\sigma^{2}\)</span></p>
+<p>$\sigma^{2}$ = <span class="math inline">\(\sigma^{2}\)</span></p>
 <p>and</p>
 <p>$$y = mx + b$$ renders into <span class="math display">\[y = mx + b\]</span></p>
 <p>It looks weird in your raw file - there’s a bit of trust the process that goes on!</p>
 </section>
 <section id="customizing-code-chunks-language" class="slide level2">
 <h2>Customizing Code Chunks: Language</h2>
-<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb5-1"><a href=""></a><span class="in">```{r}</span></span>
-<span id="cb5-2"><a href=""></a><span class="in">#Call libraries </span></span>
-<span id="cb5-3"><a href=""></a><span class="in">library(tidyverse) </span></span>
-<span id="cb5-4"><a href=""></a></span>
-<span id="cb5-5"><a href=""></a><span class="in">#Read in data</span></span>
-<span id="cb5-6"><a href=""></a><span class="in">data(iris)</span></span>
-<span id="cb5-7"><a href=""></a></span>
-<span id="cb5-8"><a href=""></a><span class="in">#Summarize data by species</span></span>
-<span id="cb5-9"><a href=""></a><span class="in">iris |&gt;</span></span>
-<span id="cb5-10"><a href=""></a><span class="in">  group_by(Species) |&gt;</span></span>
-<span id="cb5-11"><a href=""></a><span class="in">  summarise(mean_pw = mean(Petal.Width), sd_pw = sd(Petal.Width))</span></span>
-<span id="cb5-12"><a href=""></a></span>
-<span id="cb5-13"><a href=""></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb5-1"><a></a><span class="in">```{r}</span></span>
+<span id="cb5-2"><a></a><span class="in">#Call libraries </span></span>
+<span id="cb5-3"><a></a><span class="in">library(tidyverse) </span></span>
+<span id="cb5-4"><a></a></span>
+<span id="cb5-5"><a></a><span class="in">#Read in data</span></span>
+<span id="cb5-6"><a></a><span class="in">data(iris)</span></span>
+<span id="cb5-7"><a></a></span>
+<span id="cb5-8"><a></a><span class="in">#Summarize data by species</span></span>
+<span id="cb5-9"><a></a><span class="in">iris |&gt;</span></span>
+<span id="cb5-10"><a></a><span class="in">  group_by(Species) |&gt;</span></span>
+<span id="cb5-11"><a></a><span class="in">  summarise(mean_pw = mean(Petal.Width), sd_pw = sd(Petal.Width))</span></span>
+<span id="cb5-12"><a></a></span>
+<span id="cb5-13"><a></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="customizing-code-chunks-language-1" class="slide level2">
 <h2>Customizing Code Chunks: Language</h2>
-<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb6-1"><a href=""></a><span class="in">```{dot}</span></span>
-<span id="cb6-2"><a href=""></a><span class="in">digraph Gr {</span></span>
-<span id="cb6-3"><a href=""></a><span class="in">    rankdir = TD</span></span>
-<span id="cb6-4"><a href=""></a><span class="in">    node [</span></span>
-<span id="cb6-5"><a href=""></a><span class="in">        style = filled</span></span>
-<span id="cb6-6"><a href=""></a><span class="in">        shape = oval]</span></span>
-<span id="cb6-7"><a href=""></a></span>
-<span id="cb6-8"><a href=""></a><span class="in">  a1 -&gt; {a2 a3};</span></span>
-<span id="cb6-9"><a href=""></a><span class="in">  a2 -&gt; a4;</span></span>
-<span id="cb6-10"><a href=""></a><span class="in">  a3 -&gt; a5;</span></span>
-<span id="cb6-11"><a href=""></a><span class="in">  {a4 a5} -&gt; a6</span></span>
-<span id="cb6-12"><a href=""></a></span>
-<span id="cb6-13"><a href=""></a></span>
-<span id="cb6-14"><a href=""></a><span class="in">  a1[label = "Some Topic" fillcolor=white]</span></span>
-<span id="cb6-15"><a href=""></a><span class="in">  a2[label = "Sub-Topic 1" ]</span></span>
-<span id="cb6-16"><a href=""></a><span class="in">  a3[label = "Sub-Topic 2"]</span></span>
-<span id="cb6-17"><a href=""></a><span class="in">  a4[label = "Some Other Topic" fontcolor=red]</span></span>
-<span id="cb6-18"><a href=""></a><span class="in">  a5[label = "Yet Another\nTopic" fillcolor="#7AD151FF"]</span></span>
-<span id="cb6-19"><a href=""></a><span class="in">  a6[label = "A Final Topic"]</span></span>
-<span id="cb6-20"><a href=""></a><span class="in">  </span></span>
-<span id="cb6-21"><a href=""></a><span class="in">}</span></span>
-<span id="cb6-22"><a href=""></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb6-1"><a></a><span class="in">```{dot}</span></span>
+<span id="cb6-2"><a></a><span class="in">digraph Gr {</span></span>
+<span id="cb6-3"><a></a><span class="in">    rankdir = TD</span></span>
+<span id="cb6-4"><a></a><span class="in">    node [</span></span>
+<span id="cb6-5"><a></a><span class="in">        style = filled</span></span>
+<span id="cb6-6"><a></a><span class="in">        shape = oval]</span></span>
+<span id="cb6-7"><a></a></span>
+<span id="cb6-8"><a></a><span class="in">  a1 -&gt; {a2 a3};</span></span>
+<span id="cb6-9"><a></a><span class="in">  a2 -&gt; a4;</span></span>
+<span id="cb6-10"><a></a><span class="in">  a3 -&gt; a5;</span></span>
+<span id="cb6-11"><a></a><span class="in">  {a4 a5} -&gt; a6</span></span>
+<span id="cb6-12"><a></a></span>
+<span id="cb6-13"><a></a></span>
+<span id="cb6-14"><a></a><span class="in">  a1[label = "Some Topic" fillcolor=white]</span></span>
+<span id="cb6-15"><a></a><span class="in">  a2[label = "Sub-Topic 1" ]</span></span>
+<span id="cb6-16"><a></a><span class="in">  a3[label = "Sub-Topic 2"]</span></span>
+<span id="cb6-17"><a></a><span class="in">  a4[label = "Some Other Topic" fontcolor=red]</span></span>
+<span id="cb6-18"><a></a><span class="in">  a5[label = "Yet Another\nTopic" fillcolor="#7AD151FF"]</span></span>
+<span id="cb6-19"><a></a><span class="in">  a6[label = "A Final Topic"]</span></span>
+<span id="cb6-20"><a></a><span class="in">  </span></span>
+<span id="cb6-21"><a></a><span class="in">}</span></span>
+<span id="cb6-22"><a></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="customizing-code-chunks-language-2" class="slide level2">
 <h2>Customizing Code Chunks: Language</h2>
@@ -1106,75 +1116,75 @@ title-slide-attributes:
 </section>
 <section id="customizing-code-chunks-language-3" class="slide level2">
 <h2>Customizing Code Chunks: Language</h2>
-<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb7-1"><a href=""></a><span class="in">```{python}</span></span>
-<span id="cb7-2"><a href=""></a><span class="in">#Import dependencies</span></span>
-<span id="cb7-3"><a href=""></a><span class="in">import pandas as pd</span></span>
-<span id="cb7-4"><a href=""></a></span>
-<span id="cb7-5"><a href=""></a><span class="in">#Read in data</span></span>
-<span id="cb7-6"><a href=""></a><span class="in">Pretest = pd.read_table("Fa23_instructor1.xls")</span></span>
-<span id="cb7-7"><a href=""></a></span>
-<span id="cb7-8"><a href=""></a><span class="in">Posttest = pd.read_table("Sp24_instructor1.xls")</span></span>
-<span id="cb7-9"><a href=""></a></span>
-<span id="cb7-10"><a href=""></a><span class="in">#Merge on student name</span></span>
-<span id="cb7-11"><a href=""></a><span class="in">Total = pd.merge(Pretest, Posttest, on = 'STUDENT NAME')</span></span>
-<span id="cb7-12"><a href=""></a></span>
-<span id="cb7-13"><a href=""></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb7-1"><a></a><span class="in">```{python}</span></span>
+<span id="cb7-2"><a></a><span class="in">#Import dependencies</span></span>
+<span id="cb7-3"><a></a><span class="in">import pandas as pd</span></span>
+<span id="cb7-4"><a></a></span>
+<span id="cb7-5"><a></a><span class="in">#Read in data</span></span>
+<span id="cb7-6"><a></a><span class="in">Pretest = pd.read_table("Fa23_instructor1.xls")</span></span>
+<span id="cb7-7"><a></a></span>
+<span id="cb7-8"><a></a><span class="in">Posttest = pd.read_table("Sp24_instructor1.xls")</span></span>
+<span id="cb7-9"><a></a></span>
+<span id="cb7-10"><a></a><span class="in">#Merge on student name</span></span>
+<span id="cb7-11"><a></a><span class="in">Total = pd.merge(Pretest, Posttest, on = 'STUDENT NAME')</span></span>
+<span id="cb7-12"><a></a></span>
+<span id="cb7-13"><a></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="customizing-code-chunks-options" class="slide level2">
 <h2>Customizing Code Chunks: Options</h2>
-<div class="sourceCode" id="cb8"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb8-1"><a href=""></a><span class="in">```{r}</span></span>
-<span id="cb8-2"><a href=""></a><span class="in">#| echo: TRUE</span></span>
-<span id="cb8-3"><a href=""></a><span class="in">#| eval: FALSE</span></span>
-<span id="cb8-4"><a href=""></a><span class="in">#| message: FALSE</span></span>
-<span id="cb8-5"><a href=""></a><span class="in">#| warning: FALSE</span></span>
-<span id="cb8-6"><a href=""></a></span>
-<span id="cb8-7"><a href=""></a><span class="in">#Call libraries </span></span>
-<span id="cb8-8"><a href=""></a><span class="in">library(tidyverse) </span></span>
-<span id="cb8-9"><a href=""></a></span>
-<span id="cb8-10"><a href=""></a><span class="in">#Read in data</span></span>
-<span id="cb8-11"><a href=""></a><span class="in">data(iris)</span></span>
-<span id="cb8-12"><a href=""></a></span>
-<span id="cb8-13"><a href=""></a><span class="in">#Summarize data by species</span></span>
-<span id="cb8-14"><a href=""></a><span class="in">iris |&gt;</span></span>
-<span id="cb8-15"><a href=""></a><span class="in">  group_by(Species) |&gt;</span></span>
-<span id="cb8-16"><a href=""></a><span class="in">  summarise(mean_pw = mean(Petal.Width), sd_pw = sd(Petal.Width))</span></span>
-<span id="cb8-17"><a href=""></a></span>
-<span id="cb8-18"><a href=""></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb8-1"><a></a><span class="in">```{r}</span></span>
+<span id="cb8-2"><a></a><span class="in">#| echo: TRUE</span></span>
+<span id="cb8-3"><a></a><span class="in">#| eval: FALSE</span></span>
+<span id="cb8-4"><a></a><span class="in">#| message: FALSE</span></span>
+<span id="cb8-5"><a></a><span class="in">#| warning: FALSE</span></span>
+<span id="cb8-6"><a></a></span>
+<span id="cb8-7"><a></a><span class="in">#Call libraries </span></span>
+<span id="cb8-8"><a></a><span class="in">library(tidyverse) </span></span>
+<span id="cb8-9"><a></a></span>
+<span id="cb8-10"><a></a><span class="in">#Read in data</span></span>
+<span id="cb8-11"><a></a><span class="in">data(iris)</span></span>
+<span id="cb8-12"><a></a></span>
+<span id="cb8-13"><a></a><span class="in">#Summarize data by species</span></span>
+<span id="cb8-14"><a></a><span class="in">iris |&gt;</span></span>
+<span id="cb8-15"><a></a><span class="in">  group_by(Species) |&gt;</span></span>
+<span id="cb8-16"><a></a><span class="in">  summarise(mean_pw = mean(Petal.Width), sd_pw = sd(Petal.Width))</span></span>
+<span id="cb8-17"><a></a></span>
+<span id="cb8-18"><a></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="customizing-code-chunks-options-1" class="slide level2">
 <h2>Customizing Code Chunks: Options</h2>
-<div class="sourceCode" id="cb9"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb9-1"><a href=""></a><span class="in">```{r}</span></span>
-<span id="cb9-2"><a href=""></a><span class="in">#| echo: TRUE</span></span>
-<span id="cb9-3"><a href=""></a><span class="in">#| eval: FALSE</span></span>
-<span id="cb9-4"><a href=""></a></span>
-<span id="cb9-5"><a href=""></a><span class="in">#Summarize data by species</span></span>
-<span id="cb9-6"><a href=""></a><span class="in">iris |&gt;</span></span>
-<span id="cb9-7"><a href=""></a><span class="in">  group_by(Species) |&gt;</span></span>
-<span id="cb9-8"><a href=""></a><span class="in">  summarise(mean_pw = mean(Petal.Width), sd_pw = sd(Petal.Width))</span></span>
-<span id="cb9-9"><a href=""></a></span>
-<span id="cb9-10"><a href=""></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb9-1"><a></a><span class="in">```{r}</span></span>
+<span id="cb9-2"><a></a><span class="in">#| echo: TRUE</span></span>
+<span id="cb9-3"><a></a><span class="in">#| eval: FALSE</span></span>
+<span id="cb9-4"><a></a></span>
+<span id="cb9-5"><a></a><span class="in">#Summarize data by species</span></span>
+<span id="cb9-6"><a></a><span class="in">iris |&gt;</span></span>
+<span id="cb9-7"><a></a><span class="in">  group_by(Species) |&gt;</span></span>
+<span id="cb9-8"><a></a><span class="in">  summarise(mean_pw = mean(Petal.Width), sd_pw = sd(Petal.Width))</span></span>
+<span id="cb9-9"><a></a></span>
+<span id="cb9-10"><a></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="customizing-code-chunks-options-2" class="slide level2">
 <h2>Customizing Code Chunks: Options</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href=""></a><span class="co">#Summarize data by species</span></span>
-<span id="cb10-2"><a href=""></a>iris <span class="sc">|&gt;</span></span>
-<span id="cb10-3"><a href=""></a>  <span class="fu">group_by</span>(Species) <span class="sc">|&gt;</span></span>
-<span id="cb10-4"><a href=""></a>  <span class="fu">summarise</span>(<span class="at">mean_pw =</span> <span class="fu">mean</span>(Petal.Width), <span class="at">sd_pw =</span> <span class="fu">sd</span>(Petal.Width))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a><span class="co">#Summarize data by species</span></span>
+<span id="cb10-2"><a></a>iris <span class="sc">|&gt;</span></span>
+<span id="cb10-3"><a></a>  <span class="fu">group_by</span>(Species) <span class="sc">|&gt;</span></span>
+<span id="cb10-4"><a></a>  <span class="fu">summarise</span>(<span class="at">mean_pw =</span> <span class="fu">mean</span>(Petal.Width), <span class="at">sd_pw =</span> <span class="fu">sd</span>(Petal.Width))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="customizing-code-chunks-options-3" class="slide level2">
 <h2>Customizing Code Chunks: Options</h2>
-<div class="sourceCode" id="cb11"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb11-1"><a href=""></a><span class="in">```{r}</span></span>
-<span id="cb11-2"><a href=""></a><span class="in">#| echo: FALSE</span></span>
-<span id="cb11-3"><a href=""></a><span class="in">#| eval: TRUE</span></span>
-<span id="cb11-4"><a href=""></a></span>
-<span id="cb11-5"><a href=""></a><span class="in">#Summarize data by species</span></span>
-<span id="cb11-6"><a href=""></a><span class="in">iris |&gt;</span></span>
-<span id="cb11-7"><a href=""></a><span class="in">  group_by(Species) |&gt;</span></span>
-<span id="cb11-8"><a href=""></a><span class="in">  summarise(mean_pw = mean(Petal.Width), sd_pw = sd(Petal.Width))</span></span>
-<span id="cb11-9"><a href=""></a></span>
-<span id="cb11-10"><a href=""></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb11-1"><a></a><span class="in">```{r}</span></span>
+<span id="cb11-2"><a></a><span class="in">#| echo: FALSE</span></span>
+<span id="cb11-3"><a></a><span class="in">#| eval: TRUE</span></span>
+<span id="cb11-4"><a></a></span>
+<span id="cb11-5"><a></a><span class="in">#Summarize data by species</span></span>
+<span id="cb11-6"><a></a><span class="in">iris |&gt;</span></span>
+<span id="cb11-7"><a></a><span class="in">  group_by(Species) |&gt;</span></span>
+<span id="cb11-8"><a></a><span class="in">  summarise(mean_pw = mean(Petal.Width), sd_pw = sd(Petal.Width))</span></span>
+<span id="cb11-9"><a></a></span>
+<span id="cb11-10"><a></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="customizing-code-chunks-options-4" class="slide level2">
 <h2>Customizing Code Chunks: Options</h2>
@@ -1250,42 +1260,42 @@ format: html
 <ul>
 <li>Load your libraries</li>
 </ul>
-<div class="sourceCode" id="cb15"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb15-1"><a href=""></a><span class="in">```{r Libraries}</span></span>
-<span id="cb15-2"><a href=""></a><span class="in">#| warning: FALSE</span></span>
-<span id="cb15-3"><a href=""></a><span class="in">#| message: FALSE</span></span>
-<span id="cb15-4"><a href=""></a></span>
-<span id="cb15-5"><a href=""></a><span class="in">required_packages &lt;- c("tidyverse", "ggplot2", "openxlsx", "psych", "stringr")</span></span>
-<span id="cb15-6"><a href=""></a></span>
-<span id="cb15-7"><a href=""></a><span class="in"># Check and install packages if needed</span></span>
-<span id="cb15-8"><a href=""></a><span class="in">for (pkg in required_packages) {</span></span>
-<span id="cb15-9"><a href=""></a><span class="in">  if (!requireNamespace(pkg, quietly = TRUE)) {</span></span>
-<span id="cb15-10"><a href=""></a><span class="in">    install.packages(pkg)</span></span>
-<span id="cb15-11"><a href=""></a><span class="in">    library(pkg, character.only = TRUE)</span></span>
-<span id="cb15-12"><a href=""></a><span class="in">  } else {</span></span>
-<span id="cb15-13"><a href=""></a><span class="in">    library(pkg, character.only = TRUE)</span></span>
-<span id="cb15-14"><a href=""></a><span class="in">  }</span></span>
-<span id="cb15-15"><a href=""></a><span class="in">}</span></span>
-<span id="cb15-16"><a href=""></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb15"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb15-1"><a></a><span class="in">```{r Libraries}</span></span>
+<span id="cb15-2"><a></a><span class="in">#| warning: FALSE</span></span>
+<span id="cb15-3"><a></a><span class="in">#| message: FALSE</span></span>
+<span id="cb15-4"><a></a></span>
+<span id="cb15-5"><a></a><span class="in">required_packages &lt;- c("tidyverse", "ggplot2", "openxlsx", "psych", "stringr")</span></span>
+<span id="cb15-6"><a></a></span>
+<span id="cb15-7"><a></a><span class="in"># Check and install packages if needed</span></span>
+<span id="cb15-8"><a></a><span class="in">for (pkg in required_packages) {</span></span>
+<span id="cb15-9"><a></a><span class="in">  if (!requireNamespace(pkg, quietly = TRUE)) {</span></span>
+<span id="cb15-10"><a></a><span class="in">    install.packages(pkg)</span></span>
+<span id="cb15-11"><a></a><span class="in">    library(pkg, character.only = TRUE)</span></span>
+<span id="cb15-12"><a></a><span class="in">  } else {</span></span>
+<span id="cb15-13"><a></a><span class="in">    library(pkg, character.only = TRUE)</span></span>
+<span id="cb15-14"><a></a><span class="in">  }</span></span>
+<span id="cb15-15"><a></a><span class="in">}</span></span>
+<span id="cb15-16"><a></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="parent-file-1" class="slide level2">
 <h2>Parent File</h2>
 <ul>
 <li>Specify Folders</li>
 </ul>
-<div class="sourceCode" id="cb16"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb16-1"><a href=""></a><span class="in">```{r Folders}</span></span>
-<span id="cb16-2"><a href=""></a></span>
-<span id="cb16-3"><a href=""></a><span class="in"># The first line creates a "parent folder" named "Reports" in the current working directory.</span></span>
-<span id="cb16-4"><a href=""></a><span class="in"># The second line creates a "subfolder" named "Tables" within the "Reports" folder.</span></span>
-<span id="cb16-5"><a href=""></a></span>
-<span id="cb16-6"><a href=""></a><span class="in">dir.create("./Reports") # Creates the "Reports" folder in the current working directory</span></span>
-<span id="cb16-7"><a href=""></a><span class="in">dir.create("./Reports/Excel Workbooks") # Creates the "Tables" subfolder within the "Reports" folder</span></span>
-<span id="cb16-8"><a href=""></a></span>
-<span id="cb16-9"><a href=""></a><span class="in"># The "Tables" subfolder is useful if saving out Excel sheets for each assessment. This is helpful when dealing with a large number of assessments as well as a large number of automated reports.</span></span>
-<span id="cb16-10"><a href=""></a></span>
-<span id="cb16-11"><a href=""></a><span class="in">dir.create("./Data") # Creates a folder to house data files to maintain a consistent folder structure for year-to-year or semester-to-semester reporting</span></span>
-<span id="cb16-12"><a href=""></a></span>
-<span id="cb16-13"><a href=""></a><span class="in">dir.create("./Children") # Creates a folder to house the child/children files we will create</span></span>
-<span id="cb16-14"><a href=""></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb16"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb16-1"><a></a><span class="in">```{r Folders}</span></span>
+<span id="cb16-2"><a></a></span>
+<span id="cb16-3"><a></a><span class="in"># The first line creates a "parent folder" named "Reports" in the current working directory.</span></span>
+<span id="cb16-4"><a></a><span class="in"># The second line creates a "subfolder" named "Tables" within the "Reports" folder.</span></span>
+<span id="cb16-5"><a></a></span>
+<span id="cb16-6"><a></a><span class="in">dir.create("./Reports") # Creates the "Reports" folder in the current working directory</span></span>
+<span id="cb16-7"><a></a><span class="in">dir.create("./Reports/Excel Workbooks") # Creates the "Tables" subfolder within the "Reports" folder</span></span>
+<span id="cb16-8"><a></a></span>
+<span id="cb16-9"><a></a><span class="in"># The "Tables" subfolder is useful if saving out Excel sheets for each assessment. This is helpful when dealing with a large number of assessments as well as a large number of automated reports.</span></span>
+<span id="cb16-10"><a></a></span>
+<span id="cb16-11"><a></a><span class="in">dir.create("./Data") # Creates a folder to house data files to maintain a consistent folder structure for year-to-year or semester-to-semester reporting</span></span>
+<span id="cb16-12"><a></a></span>
+<span id="cb16-13"><a></a><span class="in">dir.create("./Children") # Creates a folder to house the child/children files we will create</span></span>
+<span id="cb16-14"><a></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <aside class="notes">
 <p>Can use getwd() to remind yourself where R thinks you are</p>
 <p>Projects are a good idea</p>
@@ -1304,45 +1314,48 @@ format: html
 <section id="parent-file-2" class="slide level2">
 <h2>Parent File</h2>
 <ul>
-<li>Specify File Paths</li>
+<li>Specify File Paths
+<ul>
+<li>Quarto doesn’t love this when rendering</li>
+</ul></li>
 </ul>
-<div class="sourceCode" id="cb17"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb17-1"><a href=""></a><span class="in">```{r File Paths}</span></span>
-<span id="cb17-2"><a href=""></a></span>
-<span id="cb17-3"><a href=""></a><span class="in"># Define file paths for a project folder structure</span></span>
-<span id="cb17-4"><a href=""></a></span>
-<span id="cb17-5"><a href=""></a><span class="in"># The base path is set to the current working directory using "./".</span></span>
-<span id="cb17-6"><a href=""></a><span class="in"># All subsequent file paths are constructed relative to this base path.</span></span>
-<span id="cb17-7"><a href=""></a></span>
-<span id="cb17-8"><a href=""></a><span class="in">path &lt;- "./"  # Base path representing the current working directory</span></span>
-<span id="cb17-9"><a href=""></a></span>
-<span id="cb17-10"><a href=""></a><span class="in"># File paths for specific subdirectories:</span></span>
-<span id="cb17-11"><a href=""></a><span class="in">Children_file_path &lt;- paste0(path, "Children/") # Path for the "Children" folder</span></span>
-<span id="cb17-12"><a href=""></a><span class="in">data_file_path &lt;- paste0(path, "Data/")         # Path for the "Data" folder</span></span>
-<span id="cb17-13"><a href=""></a><span class="in">report_file_path &lt;- paste0(path, "Reports/")    # Path for the "Reports" folder</span></span>
-<span id="cb17-14"><a href=""></a></span>
-<span id="cb17-15"><a href=""></a></span>
-<span id="cb17-16"><a href=""></a><span class="in"># Specify the data file name below</span></span>
-<span id="cb17-17"><a href=""></a><span class="in"># Housing in the parent file enables for higher flexibility of the Child file</span></span>
-<span id="cb17-18"><a href=""></a><span class="in">data_file_name &lt;- "Data_Large"</span></span>
-<span id="cb17-19"><a href=""></a></span>
-<span id="cb17-20"><a href=""></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb17"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb17-1"><a></a><span class="in">```{r File Paths}</span></span>
+<span id="cb17-2"><a></a></span>
+<span id="cb17-3"><a></a><span class="in"># Define file paths for a project folder structure</span></span>
+<span id="cb17-4"><a></a></span>
+<span id="cb17-5"><a></a><span class="in"># The base path is set to the current working directory using "./".</span></span>
+<span id="cb17-6"><a></a><span class="in"># All subsequent file paths are constructed relative to this base path.</span></span>
+<span id="cb17-7"><a></a></span>
+<span id="cb17-8"><a></a><span class="in">path &lt;- "./"  # Base path representing the current working directory</span></span>
+<span id="cb17-9"><a></a></span>
+<span id="cb17-10"><a></a><span class="in"># File paths for specific subdirectories:</span></span>
+<span id="cb17-11"><a></a><span class="in">Children_file_path &lt;- paste0(path, "Children/") # Path for the "Children" folder</span></span>
+<span id="cb17-12"><a></a><span class="in">data_file_path &lt;- paste0(path, "Data/")         # Path for the "Data" folder</span></span>
+<span id="cb17-13"><a></a><span class="in">report_file_path &lt;- paste0(path, "Reports/")    # Path for the "Reports" folder</span></span>
+<span id="cb17-14"><a></a></span>
+<span id="cb17-15"><a></a></span>
+<span id="cb17-16"><a></a><span class="in"># Specify the data file name below</span></span>
+<span id="cb17-17"><a></a><span class="in"># Housing in the parent file enables for higher flexibility of the Child file</span></span>
+<span id="cb17-18"><a></a><span class="in">data_file_name &lt;- "Data_Large"</span></span>
+<span id="cb17-19"><a></a></span>
+<span id="cb17-20"><a></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="parent-file-3" class="slide level2">
 <h2>Parent File</h2>
 <ul>
 <li>Specify which variables to use in your dataset (e.g.&nbsp;“Program”, “School”, “Year”, etc.)</li>
 </ul>
-<div class="sourceCode" id="cb18"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb18-1"><a href=""></a><span class="in">```{r Factors}</span></span>
-<span id="cb18-2"><a href=""></a><span class="in">probe &lt;- read.xlsx(paste0(data_file_path, "Data.xlsx"))</span></span>
-<span id="cb18-3"><a href=""></a></span>
-<span id="cb18-4"><a href=""></a><span class="in"># This is a simple simulated data set that is likely not reflective of real data; however, you can may already know how you want to segment your data for reporting.</span></span>
-<span id="cb18-5"><a href=""></a></span>
-<span id="cb18-6"><a href=""></a><span class="in"># Select only the columns with character data - Since our classifying characteristics (e.g., Year, Semester, Program) are the only character values this is a quick and easy way to isolate out values.</span></span>
-<span id="cb18-7"><a href=""></a><span class="in">probe &lt;- probe[, sapply(probe, is.character)]</span></span>
-<span id="cb18-8"><a href=""></a></span>
-<span id="cb18-9"><a href=""></a><span class="in">unique_values &lt;- lapply(probe, unique)</span></span>
-<span id="cb18-10"><a href=""></a></span>
-<span id="cb18-11"><a href=""></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb18"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb18-1"><a></a><span class="in">```{r Factors}</span></span>
+<span id="cb18-2"><a></a><span class="in">probe &lt;- read.xlsx(paste0(data_file_path, "Data.xlsx"))</span></span>
+<span id="cb18-3"><a></a></span>
+<span id="cb18-4"><a></a><span class="in"># This is a simple simulated data set that is likely not reflective of real data; however, you can may already know how you want to segment your data for reporting.</span></span>
+<span id="cb18-5"><a></a></span>
+<span id="cb18-6"><a></a><span class="in"># Select only the columns with character data - Since our classifying characteristics (e.g., Year, Semester, Program) are the only character values this is a quick and easy way to isolate out values.</span></span>
+<span id="cb18-7"><a></a><span class="in">probe &lt;- probe[, sapply(probe, is.character)]</span></span>
+<span id="cb18-8"><a></a></span>
+<span id="cb18-9"><a></a><span class="in">unique_values &lt;- lapply(probe, unique)</span></span>
+<span id="cb18-10"><a></a></span>
+<span id="cb18-11"><a></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="parent-file-4" class="slide level2">
 <h2>Parent File</h2>
@@ -1357,60 +1370,33 @@ format: html
 <section id="parent-file-5" class="slide level2">
 <h2>Parent File</h2>
 <ul>
-<li>Run child file (In a RMarkdown framework)</li>
+<li>Run child file</li>
 </ul>
-<div class="sourceCode" id="cb19"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb19-1"><a href=""></a><span class="in">```{r Child}</span></span>
-<span id="cb19-2"><a href=""></a></span>
-<span id="cb19-3"><a href=""></a><span class="in">#Program Specific</span></span>
-<span id="cb19-4"><a href=""></a><span class="in">programs &lt;- unique_values$Program # Pulling from out unique_values list</span></span>
-<span id="cb19-5"><a href=""></a></span>
-<span id="cb19-6"><a href=""></a><span class="in">for (i in 1:length(programs)) {</span></span>
-<span id="cb19-7"><a href=""></a><span class="in">  program_name &lt;- programs[i]</span></span>
-<span id="cb19-8"><a href=""></a><span class="in">  # Use the Value names specified in the latest for loop</span></span>
-<span id="cb19-9"><a href=""></a><span class="in">  # This will vary the name of the file output for each group analyzed</span></span>
-<span id="cb19-10"><a href=""></a><span class="in">  output &lt;- paste0(report_file_path, "/", program_name, "_Report.docx")</span></span>
-<span id="cb19-11"><a href=""></a><span class="in">  rmarkdown::render(</span></span>
-<span id="cb19-12"><a href=""></a><span class="in">    # The name of the Child file you are using - YOU NEED TO MAKE THIS!</span></span>
-<span id="cb19-13"><a href=""></a><span class="in">    input = "./Program_Gen_File.qmd",</span></span>
-<span id="cb19-14"><a href=""></a><span class="in">    # The naming convention of the output file</span></span>
-<span id="cb19-15"><a href=""></a><span class="in">    output_file = output,</span></span>
-<span id="cb19-16"><a href=""></a><span class="in">    # params are the list of parameters ported over from the Parent file into the Child file.</span></span>
-<span id="cb19-17"><a href=""></a><span class="in">    # You must update the YAML header under "params" to reflect the variables you are porting over.</span></span>
-<span id="cb19-18"><a href=""></a><span class="in">    params = list(program_name = program_name)</span></span>
-<span id="cb19-19"><a href=""></a><span class="in">  )</span></span>
-<span id="cb19-20"><a href=""></a><span class="in">}</span></span>
-<span id="cb19-21"><a href=""></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="parent-file-6" class="slide level2">
-<h2>Parent File</h2>
-<ul>
-<li>Run child file (in a Quarto framework)</li>
-</ul>
-<div class="sourceCode" id="cb20"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb20-1"><a href=""></a><span class="in">```{r Child}</span></span>
-<span id="cb20-2"><a href=""></a></span>
-<span id="cb20-3"><a href=""></a><span class="in">#Program Specific</span></span>
-<span id="cb20-4"><a href=""></a><span class="in">programs &lt;- unique_values$Program # Pulling from out unique_values list</span></span>
-<span id="cb20-5"><a href=""></a></span>
-<span id="cb20-6"><a href=""></a><span class="in">for (i in 1:length(programs)) {</span></span>
-<span id="cb20-7"><a href=""></a><span class="in">  program_name &lt;- programs[i]</span></span>
-<span id="cb20-8"><a href=""></a><span class="in">  output_file_name &lt;- paste0(program_name, "_Report.docx")</span></span>
-<span id="cb20-9"><a href=""></a><span class="in">  output_path &lt;- file.path(report_file_path, output_file_name)</span></span>
-<span id="cb20-10"><a href=""></a><span class="in">  # Use the Value names specified in the latest for loop</span></span>
-<span id="cb20-11"><a href=""></a><span class="in">  # This will vary the name of the file output for each group analyzed</span></span>
-<span id="cb20-12"><a href=""></a><span class="in">  quarto::quarto_render(</span></span>
-<span id="cb20-13"><a href=""></a><span class="in">    # The name of the Child file you are using</span></span>
-<span id="cb20-14"><a href=""></a><span class="in">    input = "Child_101.qmd",</span></span>
-<span id="cb20-15"><a href=""></a><span class="in">    # The naming convention of the output file defined above</span></span>
-<span id="cb20-16"><a href=""></a><span class="in">    output_file = output_file_name,</span></span>
-<span id="cb20-17"><a href=""></a><span class="in">    # params are the list of parameters ported over from the Parent file into the Child file.</span></span>
-<span id="cb20-18"><a href=""></a><span class="in">    # You must update the YAML header under "params" to reflect the variables you are porting over.</span></span>
-<span id="cb20-19"><a href=""></a><span class="in">    execute_params = list(program_name = program_name)</span></span>
-<span id="cb20-20"><a href=""></a><span class="in">  )</span></span>
-<span id="cb20-21"><a href=""></a><span class="in">  </span></span>
-<span id="cb20-22"><a href=""></a><span class="in">  #Moves the file to the correct folder (i.e. Reports)</span></span>
-<span id="cb20-23"><a href=""></a><span class="in">  file.rename(output_file_name, output_path)</span></span>
-<span id="cb20-24"><a href=""></a><span class="in">}</span></span>
-<span id="cb20-25"><a href=""></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb19"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb19-1"><a></a><span class="in">```{r Child}</span></span>
+<span id="cb19-2"><a></a></span>
+<span id="cb19-3"><a></a><span class="in">#Program Specific</span></span>
+<span id="cb19-4"><a></a><span class="in">programs &lt;- unique_values$Program # Pulling from out unique_values list</span></span>
+<span id="cb19-5"><a></a></span>
+<span id="cb19-6"><a></a><span class="in">for (i in 1:length(programs)) {</span></span>
+<span id="cb19-7"><a></a><span class="in">  program_name &lt;- programs[i]</span></span>
+<span id="cb19-8"><a></a><span class="in">  output_file_name &lt;- paste0(program_name, "_Report.docx")</span></span>
+<span id="cb19-9"><a></a><span class="in">  output_path &lt;- file.path(report_file_path, output_file_name)</span></span>
+<span id="cb19-10"><a></a><span class="in">  # Use the Value names specified in the latest for loop</span></span>
+<span id="cb19-11"><a></a><span class="in">  # This will vary the name of the file output for each group analyzed</span></span>
+<span id="cb19-12"><a></a><span class="in">  quarto::quarto_render(</span></span>
+<span id="cb19-13"><a></a><span class="in">    # The name of the Child file you are using</span></span>
+<span id="cb19-14"><a></a><span class="in">    input = "Child_101.qmd",</span></span>
+<span id="cb19-15"><a></a><span class="in">    # The naming convention of the output file defined above</span></span>
+<span id="cb19-16"><a></a><span class="in">    output_file = output_file_name,</span></span>
+<span id="cb19-17"><a></a><span class="in">    # params are the list of parameters ported over from the Parent file into the Child file.</span></span>
+<span id="cb19-18"><a></a><span class="in">    # You must update the YAML header under "params" to reflect the variables you are porting over.</span></span>
+<span id="cb19-19"><a></a><span class="in">    execute_params = list(program_name = program_name)</span></span>
+<span id="cb19-20"><a></a><span class="in">  )</span></span>
+<span id="cb19-21"><a></a><span class="in">  </span></span>
+<span id="cb19-22"><a></a><span class="in">  #Moves the file to the correct folder (i.e. Reports)</span></span>
+<span id="cb19-23"><a></a><span class="in">  file.rename(output_file_name, output_path)</span></span>
+<span id="cb19-24"><a></a><span class="in">}</span></span>
+<span id="cb19-25"><a></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="basic-child-file" class="slide level2">
 <h2>Basic Child File</h2>
@@ -1444,29 +1430,29 @@ params:
 <ul>
 <li>Setup options</li>
 </ul>
-<div class="sourceCode" id="cb22"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb22-1"><a href=""></a><span class="in">```{r setup}</span></span>
-<span id="cb22-2"><a href=""></a><span class="in">#| echo: FALSe</span></span>
-<span id="cb22-3"><a href=""></a><span class="in">#| warning: FALSE</span></span>
-<span id="cb22-4"><a href=""></a><span class="in">#| message: FALSE</span></span>
-<span id="cb22-5"><a href=""></a></span>
-<span id="cb22-6"><a href=""></a><span class="in">knitr::opts_chunk$set(error=FALSE)</span></span>
-<span id="cb22-7"><a href=""></a></span>
-<span id="cb22-8"><a href=""></a><span class="in">options(digits = 3) # Setting the number of digits for the entire document</span></span>
-<span id="cb22-9"><a href=""></a></span>
-<span id="cb22-10"><a href=""></a><span class="in">library(openxlsx)</span></span>
-<span id="cb22-11"><a href=""></a><span class="in">library(tidyverse)</span></span>
-<span id="cb22-12"><a href=""></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb21"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb21-1"><a></a><span class="in">```{r setup}</span></span>
+<span id="cb21-2"><a></a><span class="in">#| echo: FALSE</span></span>
+<span id="cb21-3"><a></a><span class="in">#| warning: FALSE</span></span>
+<span id="cb21-4"><a></a><span class="in">#| message: FALSE</span></span>
+<span id="cb21-5"><a></a></span>
+<span id="cb21-6"><a></a><span class="in">knitr::opts_chunk$set(error=FALSE)</span></span>
+<span id="cb21-7"><a></a></span>
+<span id="cb21-8"><a></a><span class="in">options(digits = 3) # Setting the number of digits for the entire document</span></span>
+<span id="cb21-9"><a></a></span>
+<span id="cb21-10"><a></a><span class="in">library(openxlsx)</span></span>
+<span id="cb21-11"><a></a><span class="in">library(tidyverse)</span></span>
+<span id="cb21-12"><a></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="basic-child-file-2" class="slide level2">
 <h2>Basic Child File</h2>
 <ul>
 <li>Identify variable(s) to disaggregate on</li>
 </ul>
-<div class="sourceCode" id="cb23"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb23-1"><a href=""></a><span class="in">```{r Identifying Program}</span></span>
-<span id="cb23-2"><a href=""></a><span class="in">#| echo: FALSE</span></span>
-<span id="cb23-3"><a href=""></a></span>
-<span id="cb23-4"><a href=""></a><span class="in">program &lt;- params$program_name</span></span>
-<span id="cb23-5"><a href=""></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb22"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb22-1"><a></a><span class="in">```{r Identifying Program}</span></span>
+<span id="cb22-2"><a></a><span class="in">#| echo: FALSE</span></span>
+<span id="cb22-3"><a></a></span>
+<span id="cb22-4"><a></a><span class="in">program &lt;- params$program_name</span></span>
+<span id="cb22-5"><a></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="basic-child-file-3" class="slide level2">
 <h2>Basic Child File</h2>
@@ -1474,49 +1460,49 @@ params:
 <li>Do the analysis!</li>
 <li>(Advanced: add tables and graphs)</li>
 </ul>
-<div class="sourceCode" id="cb24"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb24-1"><a href=""></a><span class="in">```{r DateBlock}</span></span>
-<span id="cb24-2"><a href=""></a><span class="in">#| echo: FALSE</span></span>
-<span id="cb24-3"><a href=""></a><span class="in">#| eval: TRUE</span></span>
-<span id="cb24-4"><a href=""></a><span class="in">#| message: FALSE</span></span>
-<span id="cb24-5"><a href=""></a></span>
-<span id="cb24-6"><a href=""></a><span class="in">#This will print from the code - not super pretty</span></span>
-<span id="cb24-7"><a href=""></a><span class="in">Analysis &lt;- print(paste("This analysis was conducted on", program, "data"))</span></span>
-<span id="cb24-8"><a href=""></a></span>
-<span id="cb24-9"><a href=""></a><span class="in">#This is saving as objects for use in inline code</span></span>
-<span id="cb24-10"><a href=""></a><span class="in">current_date &lt;- format(Sys.Date(), "%B %d, %Y")</span></span>
-<span id="cb24-11"><a href=""></a></span>
-<span id="cb24-12"><a href=""></a><span class="in">Date &lt;- print(paste0("This Report was generated on ", current_date))</span></span>
-<span id="cb24-13"><a href=""></a></span>
-<span id="cb24-14"><a href=""></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb23"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb23-1"><a></a><span class="in">```{r DateBlock}</span></span>
+<span id="cb23-2"><a></a><span class="in">#| echo: FALSE</span></span>
+<span id="cb23-3"><a></a><span class="in">#| eval: TRUE</span></span>
+<span id="cb23-4"><a></a><span class="in">#| message: FALSE</span></span>
+<span id="cb23-5"><a></a></span>
+<span id="cb23-6"><a></a><span class="in">#This will print from the code - not super pretty</span></span>
+<span id="cb23-7"><a></a><span class="in">Analysis &lt;- print(paste("This analysis was conducted on", program, "data"))</span></span>
+<span id="cb23-8"><a></a></span>
+<span id="cb23-9"><a></a><span class="in">#This is saving as objects for use in inline code</span></span>
+<span id="cb23-10"><a></a><span class="in">current_date &lt;- format(Sys.Date(), "%B %d, %Y")</span></span>
+<span id="cb23-11"><a></a></span>
+<span id="cb23-12"><a></a><span class="in">Date &lt;- print(paste0("This Report was generated on ", current_date))</span></span>
+<span id="cb23-13"><a></a></span>
+<span id="cb23-14"><a></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="basic-child-file-4" class="slide level2">
 <h2>Basic Child File</h2>
-<div class="sourceCode" id="cb25"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb25-1"><a href=""></a><span class="in">```{r Total}</span></span>
-<span id="cb25-2"><a href=""></a><span class="in">#| echo: FALSE</span></span>
-<span id="cb25-3"><a href=""></a></span>
-<span id="cb25-4"><a href=""></a><span class="in">#Read in the data</span></span>
-<span id="cb25-5"><a href=""></a><span class="in">data &lt;- read.xlsx("./Data/Data_Large.xlsx")</span></span>
-<span id="cb25-6"><a href=""></a></span>
-<span id="cb25-7"><a href=""></a><span class="in">#Filter by program</span></span>
-<span id="cb25-8"><a href=""></a><span class="in">filtered_data &lt;- data |&gt;</span></span>
-<span id="cb25-9"><a href=""></a><span class="in">  filter(Program == program)</span></span>
-<span id="cb25-10"><a href=""></a></span>
-<span id="cb25-11"><a href=""></a><span class="in">#Make a total score</span></span>
-<span id="cb25-12"><a href=""></a><span class="in">filtered_data$total &lt;- rowSums(filtered_data[5:16])</span></span>
-<span id="cb25-13"><a href=""></a></span>
-<span id="cb25-14"><a href=""></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb24"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb24-1"><a></a><span class="in">```{r Total}</span></span>
+<span id="cb24-2"><a></a><span class="in">#| echo: FALSE</span></span>
+<span id="cb24-3"><a></a></span>
+<span id="cb24-4"><a></a><span class="in">#Read in the data</span></span>
+<span id="cb24-5"><a></a><span class="in">data &lt;- read.xlsx("./Data/Data_Large.xlsx")</span></span>
+<span id="cb24-6"><a></a></span>
+<span id="cb24-7"><a></a><span class="in">#Filter by program</span></span>
+<span id="cb24-8"><a></a><span class="in">filtered_data &lt;- data |&gt;</span></span>
+<span id="cb24-9"><a></a><span class="in">  filter(Program == program)</span></span>
+<span id="cb24-10"><a></a></span>
+<span id="cb24-11"><a></a><span class="in">#Make a total score</span></span>
+<span id="cb24-12"><a></a><span class="in">filtered_data$total &lt;- rowSums(filtered_data[5:16])</span></span>
+<span id="cb24-13"><a></a></span>
+<span id="cb24-14"><a></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="basic-child-file-5" class="slide level2">
 <h2>Basic Child File</h2>
 <ul>
 <li>Clean up the environment</li>
 </ul>
-<div class="sourceCode" id="cb26"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb26-1"><a href=""></a><span class="in">```{r Cleaning up Global Environment}</span></span>
-<span id="cb26-2"><a href=""></a><span class="in">#| echo: FALSE</span></span>
-<span id="cb26-3"><a href=""></a></span>
-<span id="cb26-4"><a href=""></a><span class="in">rm(list = ls()[sapply(mget(ls()), is.data.frame)])</span></span>
-<span id="cb26-5"><a href=""></a><span class="in">rm(ft, p, new_columns)</span></span>
-<span id="cb26-6"><a href=""></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb25"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb25-1"><a></a><span class="in">```{r Cleaning up Global Environment}</span></span>
+<span id="cb25-2"><a></a><span class="in">#| echo: FALSE</span></span>
+<span id="cb25-3"><a></a></span>
+<span id="cb25-4"><a></a><span class="in">rm(list = ls()[sapply(mget(ls()), is.data.frame)])</span></span>
+<span id="cb25-5"><a></a><span class="in">rm(ft, p, new_columns)</span></span>
+<span id="cb25-6"><a></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="walkthrough-of-a-document" class="slide level2">
 <h2>Walkthrough of a Document</h2>
@@ -1528,7 +1514,7 @@ params:
 <li>Modify the Parent file:
 <ul>
 <li>Use the <code>iris</code> dataset (built in to R)</li>
-<li>Create a list of “programs” to iterate over</li>
+<li>Indicate the variable to iterate over (HINT: only one is a factor!)</li>
 <li>(Bonus!) Specify file paths for output, data, etc.</li>
 </ul></li>
 <li>Modify the Child file:
@@ -1542,102 +1528,102 @@ params:
 <ul>
 <li>We started with just one param (program)</li>
 <li>We also didn’t generate any tables/graphs</li>
-<li>Once you have your base Parent/Child files, you can easily add on</li>
+<li>Once you have your base Parent/Child files, you can easily add to them</li>
 <li>Advanced data analysis all goes in the Child file</li>
 </ul>
 </section>
-<section id="using-tidyverse" class="slide level2">
-<h2>Using Tidyverse</h2>
-<div class="sourceCode" id="cb27"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb27-1"><a href=""></a><span class="in">```{r Average Score Table}</span></span>
-<span id="cb27-2"><a href=""></a><span class="in">#| echo: FALSE</span></span>
-<span id="cb27-3"><a href=""></a></span>
-<span id="cb27-4"><a href=""></a><span class="in"># Filtering by program</span></span>
-<span id="cb27-5"><a href=""></a><span class="in">filtered_df &lt;- data %&gt;% </span></span>
-<span id="cb27-6"><a href=""></a><span class="in">  filter(Program == program, Year == Years, Semester == Sem)</span></span>
-<span id="cb27-7"><a href=""></a></span>
-<span id="cb27-8"><a href=""></a><span class="in"># Creating Total score</span></span>
-<span id="cb27-9"><a href=""></a></span>
-<span id="cb27-10"><a href=""></a><span class="in">filtered_df$Tot &lt;- rowSums(filtered_df[5:16])</span></span>
-<span id="cb27-11"><a href=""></a></span>
-<span id="cb27-12"><a href=""></a><span class="in">aggregated_df &lt;- filtered_df %&gt;%</span></span>
-<span id="cb27-13"><a href=""></a><span class="in">  group_by(Year) %&gt;%</span></span>
-<span id="cb27-14"><a href=""></a><span class="in">  summarise(Average_Score = mean(Tot, na.rm = TRUE))</span></span>
-<span id="cb27-15"><a href=""></a></span>
-<span id="cb27-16"><a href=""></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="using-tidyversedplyr" class="slide level2">
+<h2>Using Tidyverse/dplyr</h2>
+<div class="sourceCode" id="cb26"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb26-1"><a></a><span class="in">```{r Average Score Table}</span></span>
+<span id="cb26-2"><a></a><span class="in">#| echo: FALSE</span></span>
+<span id="cb26-3"><a></a></span>
+<span id="cb26-4"><a></a><span class="in"># Filtering by program</span></span>
+<span id="cb26-5"><a></a><span class="in">filtered_df &lt;- data %&gt;% </span></span>
+<span id="cb26-6"><a></a><span class="in">  filter(Program == program, Year == Years, Semester == Sem)</span></span>
+<span id="cb26-7"><a></a></span>
+<span id="cb26-8"><a></a><span class="in"># Creating Total score</span></span>
+<span id="cb26-9"><a></a></span>
+<span id="cb26-10"><a></a><span class="in">filtered_df$Tot &lt;- rowSums(filtered_df[5:16])</span></span>
+<span id="cb26-11"><a></a></span>
+<span id="cb26-12"><a></a><span class="in">aggregated_df &lt;- filtered_df %&gt;%</span></span>
+<span id="cb26-13"><a></a><span class="in">  group_by(Year) %&gt;%</span></span>
+<span id="cb26-14"><a></a><span class="in">  summarise(Average_Score = mean(Tot, na.rm = TRUE))</span></span>
+<span id="cb26-15"><a></a></span>
+<span id="cb26-16"><a></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="adding-in-graphs-with-ggplot" class="slide level2">
 <h2>Adding in Graphs with ggplot</h2>
-<div class="sourceCode" id="cb28"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb28-1"><a href=""></a><span class="in">```{r Average Score Graph}</span></span>
-<span id="cb28-2"><a href=""></a><span class="in">#| echo: FALSE</span></span>
-<span id="cb28-3"><a href=""></a><span class="in">#| warning: FALSE</span></span>
-<span id="cb28-4"><a href=""></a></span>
-<span id="cb28-5"><a href=""></a><span class="in">ggplot(filtered_df, aes(x = Tot, fill = Year)) +</span></span>
-<span id="cb28-6"><a href=""></a><span class="in">  geom_histogram(aes(y = ..density..), alpha = 0.5, bins = 30, position = "identity") +</span></span>
-<span id="cb28-7"><a href=""></a><span class="in">  geom_density(aes(color = Year, fill = Year), alpha = 0.5, linewidth = 1) +</span></span>
-<span id="cb28-8"><a href=""></a><span class="in">  scale_fill_manual(values = c("First" = "#450084", "Second" = "#CBB677")) +</span></span>
-<span id="cb28-9"><a href=""></a><span class="in">  scale_color_manual(values = c("First" = "#450084", "Second" = "#CBB677")) +</span></span>
-<span id="cb28-10"><a href=""></a><span class="in">  theme_minimal() +</span></span>
-<span id="cb28-11"><a href=""></a><span class="in">  labs(title = "Distribution of Total Scores", x = "Total Scores", y = "Density")</span></span>
-<span id="cb28-12"><a href=""></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb27"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb27-1"><a></a><span class="in">```{r Average Score Graph}</span></span>
+<span id="cb27-2"><a></a><span class="in">#| echo: FALSE</span></span>
+<span id="cb27-3"><a></a><span class="in">#| warning: FALSE</span></span>
+<span id="cb27-4"><a></a></span>
+<span id="cb27-5"><a></a><span class="in">ggplot(filtered_df, aes(x = Tot, fill = Year)) +</span></span>
+<span id="cb27-6"><a></a><span class="in">  geom_histogram(aes(y = ..density..), alpha = 0.5, bins = 30, position = "identity") +</span></span>
+<span id="cb27-7"><a></a><span class="in">  geom_density(aes(color = Year, fill = Year), alpha = 0.5, linewidth = 1) +</span></span>
+<span id="cb27-8"><a></a><span class="in">  scale_fill_manual(values = c("First" = "#450084", "Second" = "#CBB677")) +</span></span>
+<span id="cb27-9"><a></a><span class="in">  scale_color_manual(values = c("First" = "#450084", "Second" = "#CBB677")) +</span></span>
+<span id="cb27-10"><a></a><span class="in">  theme_minimal() +</span></span>
+<span id="cb27-11"><a></a><span class="in">  labs(title = "Distribution of Total Scores", x = "Total Scores", y = "Density")</span></span>
+<span id="cb27-12"><a></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="adding-in-tables-with-flextable" class="slide level2">
 <h2>Adding in Tables with Flextable</h2>
-<div class="sourceCode" id="cb29"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb29-1"><a href=""></a><span class="in">```{r Average Score Table}</span></span>
-<span id="cb29-2"><a href=""></a><span class="in">#| echo: FALSE</span></span>
-<span id="cb29-3"><a href=""></a></span>
-<span id="cb29-4"><a href=""></a><span class="in"># Filtering by program</span></span>
-<span id="cb29-5"><a href=""></a><span class="in">filtered_df &lt;- data %&gt;% </span></span>
-<span id="cb29-6"><a href=""></a><span class="in">  filter(Program == program, Year == Years, Semester == Sem)</span></span>
-<span id="cb29-7"><a href=""></a></span>
-<span id="cb29-8"><a href=""></a><span class="in"># Creating Total score</span></span>
-<span id="cb29-9"><a href=""></a></span>
-<span id="cb29-10"><a href=""></a><span class="in">filtered_df$Tot &lt;- rowSums(filtered_df[5:16])</span></span>
-<span id="cb29-11"><a href=""></a></span>
-<span id="cb29-12"><a href=""></a><span class="in">aggregated_df &lt;- filtered_df %&gt;%</span></span>
-<span id="cb29-13"><a href=""></a><span class="in">  group_by(Year) %&gt;%</span></span>
-<span id="cb29-14"><a href=""></a><span class="in">  summarise(Average_Score = mean(Tot, na.rm = TRUE))</span></span>
-<span id="cb29-15"><a href=""></a></span>
-<span id="cb29-16"><a href=""></a><span class="in"># Print out to table</span></span>
-<span id="cb29-17"><a href=""></a><span class="in">flextable(aggregated_df)</span></span>
-<span id="cb29-18"><a href=""></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb28"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb28-1"><a></a><span class="in">```{r Average Score Table}</span></span>
+<span id="cb28-2"><a></a><span class="in">#| echo: FALSE</span></span>
+<span id="cb28-3"><a></a></span>
+<span id="cb28-4"><a></a><span class="in"># Filtering by program</span></span>
+<span id="cb28-5"><a></a><span class="in">filtered_df &lt;- data %&gt;% </span></span>
+<span id="cb28-6"><a></a><span class="in">  filter(Program == program, Year == Years, Semester == Sem)</span></span>
+<span id="cb28-7"><a></a></span>
+<span id="cb28-8"><a></a><span class="in"># Creating Total score</span></span>
+<span id="cb28-9"><a></a></span>
+<span id="cb28-10"><a></a><span class="in">filtered_df$Tot &lt;- rowSums(filtered_df[5:16])</span></span>
+<span id="cb28-11"><a></a></span>
+<span id="cb28-12"><a></a><span class="in">aggregated_df &lt;- filtered_df %&gt;%</span></span>
+<span id="cb28-13"><a></a><span class="in">  group_by(Year) %&gt;%</span></span>
+<span id="cb28-14"><a></a><span class="in">  summarise(Average_Score = mean(Tot, na.rm = TRUE))</span></span>
+<span id="cb28-15"><a></a></span>
+<span id="cb28-16"><a></a><span class="in"># Print out to table</span></span>
+<span id="cb28-17"><a></a><span class="in">flextable(aggregated_df)</span></span>
+<span id="cb28-18"><a></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="looping-over-multiple-parameters" class="slide level2">
 <h2>Looping over multiple parameters</h2>
-<div class="sourceCode" id="cb30"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb30-1"><a href=""></a><span class="in">```{r Child}</span></span>
-<span id="cb30-2"><a href=""></a></span>
-<span id="cb30-3"><a href=""></a><span class="in">#Program Specific</span></span>
-<span id="cb30-4"><a href=""></a><span class="in">Program_list &lt;- unique_values$Program # Pulling from out unique_values list</span></span>
-<span id="cb30-5"><a href=""></a><span class="in">Year_list &lt;- unique_values$Year # Pulling from out unique_values list</span></span>
-<span id="cb30-6"><a href=""></a><span class="in">Semesters_list &lt;- unique_values$Semester # Pulling from out unique_values list</span></span>
-<span id="cb30-7"><a href=""></a></span>
-<span id="cb30-8"><a href=""></a><span class="in"># Staged loop: Looping through Years, Semesters, and Programs</span></span>
-<span id="cb30-9"><a href=""></a><span class="in">for (i in 1:length(Year_list)) {</span></span>
-<span id="cb30-10"><a href=""></a><span class="in">  for (j in 1:length(Semesters_list)) {</span></span>
-<span id="cb30-11"><a href=""></a><span class="in">    for (k in 1:length(Program_list)) {</span></span>
-<span id="cb30-12"><a href=""></a><span class="in">      Year &lt;- Year_list[i]</span></span>
-<span id="cb30-13"><a href=""></a><span class="in">      Sem &lt;- Semesters_list[j]</span></span>
-<span id="cb30-14"><a href=""></a><span class="in">      program_name &lt;- Program_list[k]</span></span>
-<span id="cb30-15"><a href=""></a><span class="in">        # Use the Value names specified in the latest for loop</span></span>
-<span id="cb30-16"><a href=""></a><span class="in">        # This will vary the name of the file output for each group analyzed</span></span>
-<span id="cb30-17"><a href=""></a><span class="in">      output_file_name &lt;- paste0(program_name, "_", Year, "_", Sem, "_Report.docx")</span></span>
-<span id="cb30-18"><a href=""></a><span class="in">      output_path &lt;- file.path(report_file_path, output_file_name)</span></span>
-<span id="cb30-19"><a href=""></a><span class="in">    </span></span>
-<span id="cb30-20"><a href=""></a><span class="in">      quarto::quarto_render(</span></span>
-<span id="cb30-21"><a href=""></a><span class="in">        # The name of the Child file you are using</span></span>
-<span id="cb30-22"><a href=""></a><span class="in">        input = "Child_501.qmd",</span></span>
-<span id="cb30-23"><a href=""></a><span class="in">        # The naming convention of the output file defined above</span></span>
-<span id="cb30-24"><a href=""></a><span class="in">        output_file = output_file_name,</span></span>
-<span id="cb30-25"><a href=""></a><span class="in">        # params are the list of parameters ported over from the Parent file into the Child file.</span></span>
-<span id="cb30-26"><a href=""></a><span class="in">        # You must update the YAML header under "params" to reflect the variables you are porting over.</span></span>
-<span id="cb30-27"><a href=""></a><span class="in">        execute_params = list(program_name = program_name, Year = Year, Sem = Sem)</span></span>
-<span id="cb30-28"><a href=""></a><span class="in">      )</span></span>
-<span id="cb30-29"><a href=""></a><span class="in">      </span></span>
-<span id="cb30-30"><a href=""></a><span class="in">      #Move the file to the correct location</span></span>
-<span id="cb30-31"><a href=""></a><span class="in">      file.rename(output_file_name, output_path)</span></span>
-<span id="cb30-32"><a href=""></a><span class="in">    }</span></span>
-<span id="cb30-33"><a href=""></a><span class="in">  }</span></span>
-<span id="cb30-34"><a href=""></a><span class="in">}</span></span>
-<span id="cb30-35"><a href=""></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb29"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb29-1"><a></a><span class="in">```{r Child}</span></span>
+<span id="cb29-2"><a></a></span>
+<span id="cb29-3"><a></a><span class="in">#Program Specific</span></span>
+<span id="cb29-4"><a></a><span class="in">Program_list &lt;- unique_values$Program # Pulling from out unique_values list</span></span>
+<span id="cb29-5"><a></a><span class="in">Year_list &lt;- unique_values$Year # Pulling from out unique_values list</span></span>
+<span id="cb29-6"><a></a><span class="in">Semesters_list &lt;- unique_values$Semester # Pulling from out unique_values list</span></span>
+<span id="cb29-7"><a></a></span>
+<span id="cb29-8"><a></a><span class="in"># Staged loop: Looping through Years, Semesters, and Programs</span></span>
+<span id="cb29-9"><a></a><span class="in">for (i in 1:length(Year_list)) {</span></span>
+<span id="cb29-10"><a></a><span class="in">  for (j in 1:length(Semesters_list)) {</span></span>
+<span id="cb29-11"><a></a><span class="in">    for (k in 1:length(Program_list)) {</span></span>
+<span id="cb29-12"><a></a><span class="in">      Year &lt;- Year_list[i]</span></span>
+<span id="cb29-13"><a></a><span class="in">      Sem &lt;- Semesters_list[j]</span></span>
+<span id="cb29-14"><a></a><span class="in">      program_name &lt;- Program_list[k]</span></span>
+<span id="cb29-15"><a></a><span class="in">        # Use the Value names specified in the latest for loop</span></span>
+<span id="cb29-16"><a></a><span class="in">        # This will vary the name of the file output for each group analyzed</span></span>
+<span id="cb29-17"><a></a><span class="in">      output_file_name &lt;- paste0(program_name, "_", Year, "_", Sem, "_Report.docx")</span></span>
+<span id="cb29-18"><a></a><span class="in">      output_path &lt;- file.path(report_file_path, output_file_name)</span></span>
+<span id="cb29-19"><a></a><span class="in">    </span></span>
+<span id="cb29-20"><a></a><span class="in">      quarto::quarto_render(</span></span>
+<span id="cb29-21"><a></a><span class="in">        # The name of the Child file you are using</span></span>
+<span id="cb29-22"><a></a><span class="in">        input = "Child_501.qmd",</span></span>
+<span id="cb29-23"><a></a><span class="in">        # The naming convention of the output file defined above</span></span>
+<span id="cb29-24"><a></a><span class="in">        output_file = output_file_name,</span></span>
+<span id="cb29-25"><a></a><span class="in">        # params are the list of parameters ported over from the Parent file into the Child file.</span></span>
+<span id="cb29-26"><a></a><span class="in">        # You must update the YAML header under "params" to reflect the variables you are porting over.</span></span>
+<span id="cb29-27"><a></a><span class="in">        execute_params = list(program_name = program_name, Year = Year, Sem = Sem)</span></span>
+<span id="cb29-28"><a></a><span class="in">      )</span></span>
+<span id="cb29-29"><a></a><span class="in">      </span></span>
+<span id="cb29-30"><a></a><span class="in">      #Move the file to the correct location</span></span>
+<span id="cb29-31"><a></a><span class="in">      file.rename(output_file_name, output_path)</span></span>
+<span id="cb29-32"><a></a><span class="in">    }</span></span>
+<span id="cb29-33"><a></a><span class="in">  }</span></span>
+<span id="cb29-34"><a></a><span class="in">}</span></span>
+<span id="cb29-35"><a></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="looping-over-multiple-parameters-1" class="slide level2">
 <h2>Looping over multiple parameters</h2>
@@ -1652,6 +1638,17 @@ params:
   # If adding more or different parameters (e.g., Year, Semester) will need to add to or change the params list.
 ---</code></pre>
 </section>
+<section id="looping-over-multiple-parameters-2" class="slide level2">
+<h2>Looping over multiple parameters</h2>
+<div class="sourceCode" id="cb31"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb31-1"><a></a><span class="in">```{r Specifying Params}</span></span>
+<span id="cb31-2"><a></a><span class="in">#| echo: FALSE</span></span>
+<span id="cb31-3"><a></a></span>
+<span id="cb31-4"><a></a><span class="in">program &lt;- params$program_name</span></span>
+<span id="cb31-5"><a></a><span class="in">Years &lt;- params$Year</span></span>
+<span id="cb31-6"><a></a><span class="in">Sem &lt;- params$Sem</span></span>
+<span id="cb31-7"><a></a></span>
+<span id="cb31-8"><a></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
 <section id="activity-2" class="slide level2">
 <h2>Activity</h2>
 <p><strong>Using the guide parent/child files from your last activity:</strong></p>
@@ -1665,11 +1662,34 @@ params:
 <ul>
 <li>Summarize filtered data by one variable</li>
 <li>Create a table and/or a plot</li>
+</ul></li>
 <li>Use quarto::quarto_render() to produce all reports</li>
+</ul>
+</section>
+<section id="wrapping-up" class="slide level2 incremental">
+<h2>Wrapping Up</h2>
+<ul>
+<li>Sometimes, things don’t quite go right
+<ul>
+<li>Error messages are shockingly useful</li>
+</ul></li>
+<li>Getting your formatting correct can also be a challenge
+<ul>
+<li>Large tables are a pain</li>
 </ul></li>
 </ul>
 </section>
-<section id="wrapping-up" class="slide level2">
+<section id="wrapping-up-1" class="slide level2 incremental">
+<h2>Wrapping Up</h2>
+<ul>
+<li>Integrating code, text, and files into a report aids in flexibility and reproducibility</li>
+<li>Quarto is one tool to accomplish this
+<ul>
+<li>Less copy/pasting numbers, graphs, and tables</li>
+</ul></li>
+</ul>
+</section>
+<section id="wrapping-up-2" class="slide level2 incremental">
 <h2>Wrapping Up</h2>
 <ul>
 <li>Quarto can be used to automate report generation
@@ -1690,6 +1710,7 @@ params:
 <p>Laura Lambert</p>
 <p>laycocla@jmu.edu</p>
 
+
 <img data-src="QR_LinkedIn.png" class="r-stretch"><div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 
@@ -1700,19 +1721,19 @@ params:
   </div>
 
   <script>window.backupDefine = window.define; window.define = undefined;</script>
-  <script src="Presentation_files/libs/revealjs/dist/reveal.js"></script>
+  <script src="site_libs/revealjs/dist/reveal.js"></script>
   <!-- reveal.js plugins -->
-  <script src="Presentation_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
-  <script src="Presentation_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
-  <script src="Presentation_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
-  <script src="Presentation_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
-  <script src="Presentation_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  <script src="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="site_libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
-  <script src="Presentation_files/libs/revealjs/plugin/notes/notes.js"></script>
-  <script src="Presentation_files/libs/revealjs/plugin/search/search.js"></script>
-  <script src="Presentation_files/libs/revealjs/plugin/zoom/zoom.js"></script>
-  <script src="Presentation_files/libs/revealjs/plugin/math/math.js"></script>
+  <script src="site_libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="site_libs/revealjs/plugin/search/search.js"></script>
+  <script src="site_libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="site_libs/revealjs/plugin/math/math.js"></script>
   <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
 
   <script>
@@ -2071,7 +2092,7 @@ params:
       }
         var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
         var mailtoRegex = new RegExp(/^mailto:/);
-          var filterRegex = new RegExp('/' + window.location.host + '/');
+          var filterRegex = new RegExp("https:\/\/lauralambert99\.github\.io\/Report_Generation_with_Quarto\/");
         var isInternal = (href) => {
             return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
         }
