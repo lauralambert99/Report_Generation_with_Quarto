@@ -716,7 +716,8 @@ This is SUPER important - where you specify your format, title, and what paramet
 
   - Setup options
 
-```{{r setup, include=FALSE}}
+```{{r setup}}
+#| echo: FALSE
 #| warning: FALSE
 #| message: FALSE
 
@@ -748,8 +749,10 @@ program <- params$program_name
 #| eval: TRUE
 #| message: FALSE
 
+#This will print from the code - not super pretty
 Analysis <- print(paste("This analysis was conducted on", program, "data"))
 
+#This is saving as objects for use in inline code
 current_date <- format(Sys.Date(), "%B %d, %Y")
 
 Date <- print(paste0("This Report was generated on ", current_date))
@@ -762,7 +765,6 @@ Date <- print(paste0("This Report was generated on ", current_date))
 #| echo: FALSE
 
 #Read in the data
-
 data <- read.xlsx("./Data/Data_Large.xlsx")
 
 #Filter by program
@@ -792,11 +794,11 @@ rm(ft, p, new_columns)
 **Using the provided guide parent/child files:**
 
   - Modify the Parent file:
-    + Use a dataset (e.g. iris, assessment data)
-    + Create a list of 'programs' to iterate over
+    + Use the `iris` dataset (built in to R)
+    + Create a list of "programs" to iterate over
     + (Bonus!) Specify file paths for output, data, etc.
   - Modify the Child file:
-    + Generate reports dynamically for each program
+    + Generate reports dynamically for each "program"
 
 ## Advanced Data Analysis
 
@@ -917,6 +919,9 @@ params:
 
 **Using the guide parent/child files from your last activity:**
 
+  - Read in the "Data_Large.xlsx" file
+  - Iterate over programs 
+    + Reload guide file if you'd like to have that framework
   - Add an analysis section to your Child file:
     + Summarize filtered data by one variable
     + Create a table and/or a plot
@@ -924,4 +929,21 @@ params:
 
 ## Wrapping Up
 
+  - Quarto can be used to automate report generation 
+    + Documentation
+    + Disaggregation
+  - Integrate reports and data analysis
+  - Flexibility of code language, text, and LaTeX
+  
+  
 ## Questions?
+
+![](question.svg)
+
+## Stay in Touch!{.center}
+
+ Laura Lambert
+ 
+laycocla@jmu.edu
+
+![](QR_LinkedIn.png)
