@@ -970,6 +970,7 @@ Sem <- params$Sem
 
   - Sometimes, things don't quite go right
     + Error messages are shockingly useful
+    + Child block naming makes errors easier to locate
   - Getting your formatting correct can also be a challenge
     + Large tables are a pain
 
