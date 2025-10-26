@@ -988,11 +988,11 @@ Sem <- params$Sem
   - Flexibility of code language, text, and LaTeX
   
   
-## Questions?
+## Questions? {style="text-align: center;"}
 
 ![](question.svg)
 
-## Stay in Touch!
+## Stay in Touch! {style="text-align: center;"}
 
 :::: {.columns}
 
