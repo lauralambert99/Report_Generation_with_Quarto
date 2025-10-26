@@ -1,0 +1,954 @@
+---
+title: "Report Generation with Quarto"
+author: Laura Lambert & Josiah Hunsberger
+institute: James Madison University
+format: 
+  revealjs:
+    theme: default
+    slide-tone: false
+    preview-links: auto
+title-slide-attributes:
+      data-background-image: rsz_1rsz_lakeview_overview.jpg
+      data-background-opacity: "0.5"
+---
+
+```{r}
+#| echo: FALSE
+#| eval: TRUE
+#| message: FALSE
+#| warning: FALSE
+
+#Call libraries 
+library(tidyverse) 
+
+#Read in data
+data(iris)
+
+```
+
+## Welcome!
+
+:::{.incremental}
+Road map for this session:
+
+  1. Introduction and Overview
+  2. Quarto Basics
+  3. Parent/Child File Structure
+  4. Advanced Data Analysis
+  5. Wrap-up
+  6. Time for Questions
+:::
+
+:::{.notes}
+Each section will have some content followed by some hands-on time
+:::
+  
+## General Housekeeping 
+
+  - Please feel free to put questions in the chat as they come up or use 'raise hand'
+
+  - It is assumed you have R and RStudio installed on your machines - if not, there's time to do it now!
+
+  - We will install Quarto shortly
+
+:::{.notes}
+I'll drop the link to get R/RStudio in the chat
+:::
+
+## Objectives
+
+  - Participants will identify benefits of data analysis within an integrated environment
+  - Participants will make a Quarto Project
+  - Participants will analyze and write code in Quarto
+  - Participants will utilize a Parent/Child file structure to generate multiple unique reports for different programs/subgroups
+  - Participants will learn best practices for reproducibility
+
+
+## Why Automated Reporting?
+
+:::{.incremental}
+Let's ask a different question:
+
+How do you currently analyze your data?  (answers might be along the lines of Excel workbooks, SPSS dropdowns, SPSS syntax, R, Python, SAS, etc.)
+:::
+
+:::{.notes}
+Put your answer in chat
+:::
+
+## Why Automated Reporting? {auto-animate="true"}
+
+:::{.incremental}
+  - Why use syntax over dropdown menus?
+
+  - Documentation and reproducibility!
+:::
+
+## Why Automated Reporting?
+
+:::{.incremental}
+  - Similarly, we can document the steps we took to analyze the data and generate reports
+
+  - Along with documentation, the reproducibility aspect can save time in a multitude of ways 
+
+  - Using a Parent/Child format allows for automatic, disaggregated generation of multiple reports (no more manually creating each and every report!)
+:::
+
+:::{.notes}
+Saves time both in being able to spit out a bunch of reports all at once, but also next year when you do it, you don't have to start from scratch.
+:::
+
+## What is a Parent/Child format?
+
+:::{.incremental}
+  - We will dive deeper into Parent/Child structure in a bit
+
+  - Briefly, you can take one large dataset and make individualized reports based on program, college, department, etc.
+
+  - Think test score reports children may get, or SAT/GRE/ACT/PRAXIS score reports
+:::
+
+## What is a Parent/Child format
+
+```{dot}
+digraph G {
+    rankdir = LR
+    node [
+        style = filled
+        shape = oval]
+
+  a1 -> {a2 a3 a4 a5};
+
+
+  a1[label = "All Score Data For\nUniversity XYZ" fillcolor=white]
+  a2[label = "Report for\nEnglish" fillcolor=white]
+  a3[label = "Report for\nHistory" fillcolor=white]
+  a4[label = "Report for\nBiology" fillcolor=white]
+  a5[label = "Report for\nSpanish" fillcolor=white]
+  
+}
+```
+
+## What is a Parent/Child format
+
+```{dot}
+digraph G {
+    rankdir = LR
+    node [
+        style = filled
+        shape = oval]
+
+  a1 -> {a2 a3 a4 a5};
+
+
+  a1[label = "All Score Data For\nUniversity XYZ" fillcolor="#414487FF" fontcolor=white]
+  a2[label = "Report for\nEnglish" fillcolor=white]
+  a3[label = "Report for\nHistory" fillcolor=white]
+  a4[label = "Report for\nBiology" fillcolor=white]
+  a5[label = "Report for\nSpanish" fillcolor=white]
+  
+}
+```
+
+## What is a Parent/Child format
+
+```{dot}
+digraph G {
+    rankdir = LR
+    node [
+        style = filled
+        shape = oval]
+
+  a1 -> {a2 a3 a4 a5};
+
+
+  a1[label = "All Score Data For\nUniversity XYZ" fillcolor="#414487FF" fontcolor=white]
+  a2[label = "Report for\nEnglish" fillcolor="#7AD151FF"]
+  a3[label = "Report for\nHistory" fillcolor="#7AD151FF"]
+  a4[label = "Report for\nBiology" fillcolor="#7AD151FF"]
+  a5[label = "Report for\nSpanish" fillcolor="#7AD151FF"]
+  
+}
+```
+
+## Quarto
+
+  - [Quarto](https://quarto.org) is an "open-source scientific and technical publishing system"
+
+  - In plain terms: it lets you integrate plain text markdown, code, output, and visualizations all in one document.
+
+  - Allows for a variety of outputs: PDF, HTML, Word, etc.
+
+## Quarto
+
+Let's get started downloading it now: https://quarto.org/docs/get-started/
+
+![](quarto_download.png)
+
+:::{.notes}
+I'll also put the link to Quarto download in chat: https://quarto.org/docs/get-started/
+:::
+
+
+## Pause for Introductions
+
+  - Name
+  - Institution
+  - Goal(s) for the workshop
+
+## Code Familarity
+
+  - How familiar are you with R/Python/coding?
+
+## Dive into Quarto 
+
+:::{.incremental}
+  - From RStudio, new "Quarto Document" or "Create a Project"
+    + Files are a single document
+    + Projects are a folder
+:::
+
+## Dive into Quarto
+
+![](new_quarto.png)
+
+## Parts of a Quarto Document
+
+:::{.notes}
+Here is what a new(?) Quarto Document looks like, lets break each part down {maybe make a dummy quarto?}
+:::
+
+````
+---
+title: "Untitled"
+format: html
+editor: visual
+---
+
+## Quarto
+
+Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+
+## Running Code
+
+When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
+
+
+```{{r}}
+1 + 1
+```
+
+
+You can add options to executable code like this
+
+
+
+```{{r}}
+#| echo: false
+2 * 2
+```
+
+
+
+The `echo: false` option disables the printing of code (only output is displayed).
+
+````
+
+## Rendered Form
+
+![](rendered_quarto.png)
+
+
+## Parts of a Quarto Document: the YAML header
+
+```
+---
+title: "Untitled"
+format: html
+editor: visual
+---
+```
+
+## Parts of a Quarto Document: the YAML header
+
+```
+---
+title: "Report Generation with Quarto"
+author: Laura Lambert & Josiah Hunsberger
+institute: James Madison University
+format: 
+  revealjs:
+    theme: default
+    slide-tone: false
+    preview-links: auto
+title-slide-attributes:
+      data-background-image: rsz_1rsz_lakeview_overview.jpg
+      data-background-opacity: "0.5"
+---
+```
+
+
+:::{.notes}
+This is where global document rules go
+
+Visual editor warning - can mess with formatting when switching back and forth (?)
+:::
+
+## Parts of a Quarto Document: Code Chunks
+
+```{{r}}
+#Call libraries 
+library(tidyverse) 
+
+#Read in data
+data(iris)
+
+#Summarize data by species
+iris |>
+  group_by(Species) |>
+  summarise(mean_pw = mean(Petal.Width), sd_pw = sd(Petal.Width))
+
+```
+
+Code chunks work just like code in a script file - you can have code, comments, functions, etc.  
+
+:::{.notes}
+Unlike in a script file, you set off code chunks with three back-ticks
+:::
+
+
+## Parts of a Quarto Document: Text
+
+  - You can type text just as in a text editor
+  - Different levels of header are identified with # (##, ###, etc.)
+  - You can make text **bold** by sandwiching between \*\* and *italic* with \*
+
+## Parts of a Quarto Document: Text + Code
+
+  - Quarto allows for inline code evaluation
+    + Integrates objects or values calculated in a previous code chunk with text
+  - Helps avoid needing to go back and find every instance of a value if it has changed!
+
+
+## Parts of a Quarto Document: Math and Symbols
+
+  - LaTeX makes math and symbols easy
+  - Sandwich math and/or symbol expressions between $: \$ MATH \$
+  - Keep a cheat-sheet on your desk!
+
+:::{.notes}
+Drop link to cheat-sheet
+:::
+
+## Parts of a Quarto Document: Math and Symbols
+
+ \$\\sigma^\{2\}\$ = $\sigma^{2}$
+
+and 
+
+\$\$y = mx + b\$\$ renders into $$y = mx + b$$
+
+It looks weird in your raw file - there's a bit of trust the process that goes on!
+
+
+## Customizing Code Chunks: Language
+
+```{{r}}
+#Call libraries 
+library(tidyverse) 
+
+#Read in data
+data(iris)
+
+#Summarize data by species
+iris |>
+  group_by(Species) |>
+  summarise(mean_pw = mean(Petal.Width), sd_pw = sd(Petal.Width))
+
+```
+
+
+## Customizing Code Chunks: Language
+
+```{{dot}}
+digraph Gr {
+    rankdir = TD
+    node [
+        style = filled
+        shape = oval]
+
+  a1 -> {a2 a3};
+  a2 -> a4;
+  a3 -> a5;
+  {a4 a5} -> a6
+
+
+  a1[label = "Some Topic" fillcolor=white]
+  a2[label = "Sub-Topic 1" ]
+  a3[label = "Sub-Topic 2"]
+  a4[label = "Some Other Topic" fontcolor=red]
+  a5[label = "Yet Another\nTopic" fillcolor="#7AD151FF"]
+  a6[label = "A Final Topic"]
+  
+}
+```
+
+## Customizing Code Chunks: Language
+
+```{dot}
+digraph Gr {
+    rankdir = TD
+    node [
+        style = filled
+        shape = oval]
+
+  a1 -> {a2 a3};
+  a2 -> a4;
+  a3 -> a5;
+  {a4 a5} -> a6
+
+
+  a1[label = "Some Topic" fillcolor=white]
+  a2[label = "Sub-Topic 1" ]
+  a3[label = "Sub-Topic 2"]
+  a4[label = "Some Other Topic" fontcolor=red]
+  a5[label = "Yet Another\nTopic" fillcolor="#7AD151FF"]
+  a6[label = "A Final Topic"]
+  
+}
+```
+
+## Customizing Code Chunks: Language
+
+```{{python}}
+#Import dependencies
+import pandas as pd
+
+#Read in data
+Pretest = pd.read_table("Fa23_instructor1.xls")
+
+Posttest = pd.read_table("Sp24_instructor1.xls")
+
+#Merge on student name
+Total = pd.merge(Pretest, Posttest, on = 'STUDENT NAME')
+
+```
+
+## Customizing Code Chunks: Options
+
+```{{r}}
+#| echo: TRUE
+#| eval: FALSE
+#| message: FALSE
+#| warning: FALSE
+
+#Call libraries 
+library(tidyverse) 
+
+#Read in data
+data(iris)
+
+#Summarize data by species
+iris |>
+  group_by(Species) |>
+  summarise(mean_pw = mean(Petal.Width), sd_pw = sd(Petal.Width))
+
+```
+
+## Customizing Code Chunks: Options
+
+```{{r}}
+#| echo: TRUE
+#| eval: FALSE
+
+#Summarize data by species
+iris |>
+  group_by(Species) |>
+  summarise(mean_pw = mean(Petal.Width), sd_pw = sd(Petal.Width))
+
+```
+
+## Customizing Code Chunks: Options
+
+```{r}
+#| echo: TRUE
+#| eval: FALSE
+
+#Summarize data by species
+iris |>
+  group_by(Species) |>
+  summarise(mean_pw = mean(Petal.Width), sd_pw = sd(Petal.Width))
+
+```
+
+## Customizing Code Chunks: Options
+
+```{{r}}
+#| echo: FALSE
+#| eval: TRUE
+
+#Summarize data by species
+iris |>
+  group_by(Species) |>
+  summarise(mean_pw = mean(Petal.Width), sd_pw = sd(Petal.Width))
+
+```
+
+
+## Customizing Code Chunks: Options
+
+```{r}
+#| echo: FALSE
+#| eval: TRUE
+
+#Summarize data by species
+iris |>
+  group_by(Species) |>
+  summarise(mean_pw = mean(Petal.Width), sd_pw = sd(Petal.Width))
+
+```
+
+## Output Options
+
+```
+---
+title: "Some Creative Title"
+author: Your Name
+format: pdf 
+---
+```
+
+## Output Options
+
+```
+---
+title: "Some Creative Title"
+author: Your Name
+toc: TRUE
+format: html 
+---
+```
+
+:::{.notes}
+If rendering to html, need a place to host.  quartopub is a free, public place.  As is github pages.  Considerations....
+:::
+
+## Activity
+
+  - Create a basic Quarto Document (.qmd)
+    + Write a few lines of text
+    + Add a code chunk to analyze a built-in dataset (e.g. iris, mtcars, etc.)
+    + Customize your output
+  - We will work in break-out rooms
+    + Share and troubleshoot
+
+## Parent/Child File Structure
+
+  - Two files: 
+    + "Parent" file contains global settings
+    + "Child" file contains modular components for disaggregated reporting
+  - Project structure can be super helpful here
+    
+## Parent File
+
+  - Load your libraries
+  
+```{{r Libraries}}
+#| warning: FALSE
+#| message: FALSE
+
+required_packages <- c("tidyverse", "ggplot2", "openxlsx", "psych", "stringr")
+
+# Check and install packages if needed
+for (pkg in required_packages) {
+  if (!requireNamespace(pkg, quietly = TRUE)) {
+    install.packages(pkg)
+    library(pkg, character.only = TRUE)
+  } else {
+    library(pkg, character.only = TRUE)
+  }
+}
+```
+
+## Parent File
+
+  - Specify Folders
+
+```{{r Folders}}
+
+# The first line creates a "parent folder" named "Reports" in the current working directory.
+# The second line creates a "subfolder" named "Tables" within the "Reports" folder.
+
+dir.create("./Reports") # Creates the "Reports" folder in the current working directory
+dir.create("./Reports/Excel Workbooks") # Creates the "Tables" subfolder within the "Reports" folder
+
+# The "Tables" subfolder is useful if saving out Excel sheets for each assessment. This is helpful when dealing with a large number of assessments as well as a large number of automated reports.
+
+dir.create("./Data") # Creates a folder to house data files to maintain a consistent folder structure for year-to-year or semester-to-semester reporting
+
+dir.create("./Children") # Creates a folder to house the child/children files we will create
+```
+
+:::{.notes}
+Can use getwd() to remind yourself where R thinks you are
+
+Projects are a good idea
+:::
+
+## Parent File
+
+  - Specify File Paths
+    + Quarto doesn't love this when rendering
+
+```{{r File Paths}}
+
+# Define file paths for a project folder structure
+
+# The base path is set to the current working directory using "./".
+# All subsequent file paths are constructed relative to this base path.
+
+path <- "./"  # Base path representing the current working directory
+
+# File paths for specific subdirectories:
+Children_file_path <- paste0(path, "Children/") # Path for the "Children" folder
+data_file_path <- paste0(path, "Data/")         # Path for the "Data" folder
+report_file_path <- paste0(path, "Reports/")    # Path for the "Reports" folder
+
+
+# Specify the data file name below
+# Housing in the parent file enables for higher flexibility of the Child file
+data_file_name <- "Data_Large"
+
+```
+
+## Parent File
+
+  - Specify which variables to use in your dataset (e.g. "Program", "School", "Year", etc.)
+
+```{{r Factors}}
+probe <- read.xlsx(paste0(data_file_path, "Data.xlsx"))
+
+# This is a simple simulated data set that is likely not reflective of real data; however, you can may already know how you want to segment your data for reporting.
+
+# Select only the columns with character data - Since our classifying characteristics (e.g., Year, Semester, Program) are the only character values this is a quick and easy way to isolate out values.
+probe <- probe[, sapply(probe, is.character)]
+
+unique_values <- lapply(probe, unique)
+
+```
+
+## Parent File
+
+  - Load your libraries
+  - Specify Folders
+  - Specify File Paths
+  - Specify which variables to use in your dataset (e.g. "Program", "School", "Year", etc.)
+  - ***DETOUR***: make child file!!
+
+## Parent File 
+
+  - Run child file
+
+```{{r Child}}
+
+#Program Specific
+programs <- unique_values$Program # Pulling from out unique_values list
+
+for (i in 1:length(programs)) {
+  program_name <- programs[i]
+  output_file_name <- paste0(program_name, "_Report.docx")
+  output_path <- file.path(report_file_path, output_file_name)
+  # Use the Value names specified in the latest for loop
+  # This will vary the name of the file output for each group analyzed
+  quarto::quarto_render(
+    # The name of the Child file you are using
+    input = "Child_101.qmd",
+    # The naming convention of the output file defined above
+    output_file = output_file_name,
+    # params are the list of parameters ported over from the Parent file into the Child file.
+    # You must update the YAML header under "params" to reflect the variables you are porting over.
+    execute_params = list(program_name = program_name)
+  )
+  
+  #Moves the file to the correct folder (i.e. Reports)
+  file.rename(output_file_name, output_path)
+}
+```
+
+## Basic Child File
+
+  - YAML header
+  
+````
+---
+title: "Score Report"
+format: docx
+toc: true
+params:
+  program_name: NA
+  # If adding more or different parameters (e.g., Year, Semester) will need to add to or change the params list.
+---
+````
+:::{.notes}
+This is SUPER important - where you specify your format, title, and what parameters you'll be using
+:::
+
+## Basic Child File
+
+  - Setup options
+
+```{{r setup}}
+#| echo: FALSE
+#| warning: FALSE
+#| message: FALSE
+
+knitr::opts_chunk$set(error=FALSE)
+
+options(digits = 3) # Setting the number of digits for the entire document
+
+library(openxlsx)
+library(tidyverse)
+```
+
+## Basic Child File
+
+  - Identify variable(s) to disaggregate on
+
+```{{r Identifying Program}}
+#| echo: FALSE
+
+program <- params$program_name
+```
+
+## Basic Child File
+
+  - Do the analysis!
+  - (Advanced: add tables and graphs)
+
+```{{r DateBlock}}
+#| echo: FALSE
+#| eval: TRUE
+#| message: FALSE
+
+#This will print from the code - not super pretty
+Analysis <- print(paste("This analysis was conducted on", program, "data"))
+
+#This is saving as objects for use in inline code
+current_date <- format(Sys.Date(), "%B %d, %Y")
+
+Date <- print(paste0("This Report was generated on ", current_date))
+
+```
+
+## Basic Child File
+
+```{{r Total}}
+#| echo: FALSE
+
+#Read in the data
+data <- read.xlsx("./Data/Data_Large.xlsx")
+
+#Filter by program
+filtered_data <- data |>
+  filter(Program == program)
+
+#Make a total score
+filtered_data$total <- rowSums(filtered_data[5:16])
+
+```
+
+## Basic Child File
+
+  - Clean up the environment
+
+```{{r Cleaning up Global Environment}}
+#| echo: FALSE
+
+rm(list = ls()[sapply(mget(ls()), is.data.frame)])
+rm(ft, p, new_columns)
+```
+
+## Walkthrough of a Document
+
+## Activity
+
+**Using the provided guide parent/child files:**
+
+  - Modify the Parent file:
+    + Use the `iris` dataset (built in to R)
+    + Indicate the variable to iterate over (HINT: only one is a factor!)
+    + (Bonus!) Specify file paths for output, data, etc.
+  - Modify the Child file:
+    + Generate reports dynamically for each "program"
+
+## Advanced Data Analysis
+
+  - We started with just one param (program)
+  - We also didn't generate any tables/graphs
+  - Once you have your base Parent/Child files, you can easily add to them
+  - Advanced data analysis all goes in the Child file
+  
+## Using Tidyverse/dplyr
+
+```{{r Average Score Table}}
+#| echo: FALSE
+
+# Filtering by program
+filtered_df <- data %>% 
+  filter(Program == program, Year == Years, Semester == Sem)
+
+# Creating Total score
+
+filtered_df$Tot <- rowSums(filtered_df[5:16])
+
+aggregated_df <- filtered_df %>%
+  group_by(Year) %>%
+  summarise(Average_Score = mean(Tot, na.rm = TRUE))
+
+```
+
+## Adding in Graphs with ggplot
+
+```{{r Average Score Graph}}
+#| echo: FALSE
+#| warning: FALSE
+
+ggplot(filtered_df, aes(x = Tot, fill = Year)) +
+  geom_histogram(aes(y = ..density..), alpha = 0.5, bins = 30, position = "identity") +
+  geom_density(aes(color = Year, fill = Year), alpha = 0.5, linewidth = 1) +
+  scale_fill_manual(values = c("First" = "#450084", "Second" = "#CBB677")) +
+  scale_color_manual(values = c("First" = "#450084", "Second" = "#CBB677")) +
+  theme_minimal() +
+  labs(title = "Distribution of Total Scores", x = "Total Scores", y = "Density")
+```
+
+## Adding in Tables with Flextable
+
+```{{r Average Score Table}}
+#| echo: FALSE
+
+# Filtering by program
+filtered_df <- data %>% 
+  filter(Program == program, Year == Years, Semester == Sem)
+
+# Creating Total score
+
+filtered_df$Tot <- rowSums(filtered_df[5:16])
+
+aggregated_df <- filtered_df %>%
+  group_by(Year) %>%
+  summarise(Average_Score = mean(Tot, na.rm = TRUE))
+
+# Print out to table
+flextable(aggregated_df)
+```
+
+## Looping over multiple parameters
+
+```{{r Child}}
+
+#Program Specific
+Program_list <- unique_values$Program # Pulling from out unique_values list
+Year_list <- unique_values$Year # Pulling from out unique_values list
+Semesters_list <- unique_values$Semester # Pulling from out unique_values list
+
+# Staged loop: Looping through Years, Semesters, and Programs
+for (i in 1:length(Year_list)) {
+  for (j in 1:length(Semesters_list)) {
+    for (k in 1:length(Program_list)) {
+      Year <- Year_list[i]
+      Sem <- Semesters_list[j]
+      program_name <- Program_list[k]
+        # Use the Value names specified in the latest for loop
+        # This will vary the name of the file output for each group analyzed
+      output_file_name <- paste0(program_name, "_", Year, "_", Sem, "_Report.docx")
+      output_path <- file.path(report_file_path, output_file_name)
+    
+      quarto::quarto_render(
+        # The name of the Child file you are using
+        input = "Child_501.qmd",
+        # The naming convention of the output file defined above
+        output_file = output_file_name,
+        # params are the list of parameters ported over from the Parent file into the Child file.
+        # You must update the YAML header under "params" to reflect the variables you are porting over.
+        execute_params = list(program_name = program_name, Year = Year, Sem = Sem)
+      )
+      
+      #Move the file to the correct location
+      file.rename(output_file_name, output_path)
+    }
+  }
+}
+```
+
+## Looping over multiple parameters
+
+````
+---
+title: "Program_Gen_File"
+format: docx
+toc: true
+params:
+  program_name: NA
+  Year: NA
+  Sem: NA
+  # If adding more or different parameters (e.g., Year, Semester) will need to add to or change the params list.
+---
+````
+
+## Looping over multiple parameters
+
+```{{r Specifying Params}}
+#| echo: FALSE
+
+program <- params$program_name
+Years <- params$Year
+Sem <- params$Sem
+
+```
+
+## Activity
+
+**Using the guide parent/child files from your last activity:**
+
+  - Read in the "Data_Large.xlsx" file
+  - Iterate over programs 
+    + Reload guide file if you'd like to have that framework
+  - Add an analysis section to your Child file:
+    + Summarize filtered data by one variable
+    + Create a table and/or a plot
+  - Use quarto::quarto_render() to produce all reports
+
+## Wrapping Up{.incremental}
+
+  - Sometimes, things don't quite go right
+    + Error messages are shockingly useful
+  - Getting your formatting correct can also be a challenge
+    + Large tables are a pain
+
+## Wrapping Up{.incremental}
+
+  - Integrating code, text, and files into a report aids in flexibility and reproducibility
+  - Quarto is one tool to accomplish this
+    + Less copy/pasting numbers, graphs, and tables
+
+## Wrapping Up{.incremental}
+
+  - Quarto can be used to automate report generation 
+    + Documentation
+    + Disaggregation
+  - Integrate reports and data analysis
+  - Flexibility of code language, text, and LaTeX
+  
+  
+## Questions?
+
+![](question.svg)
+
+## Stay in Touch!{.center}
+
+ Laura Lambert
+ 
+laycocla@jmu.edu
+
+![](QR_LinkedIn.png)
